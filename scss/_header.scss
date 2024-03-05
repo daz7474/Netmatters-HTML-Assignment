@@ -1,0 +1,71 @@
+// ==========================================================================
+// Header
+// ==========================================================================
+
+.nav-container {
+  padding: 20px 0;
+
+  @include mq('md') {
+    width: 940px;
+    margin: 0 auto;
+  }
+
+  @include mq('lg') {
+    width: 1260px;
+    margin: 0 auto;
+  }
+}
+
+.nav-inner-container {
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.nav-row {
+  display: flex;
+  justify-content: space-between;
+
+  i {
+    font-size: 26px;
+  }
+}
+
+.header-logo {
+  img {
+    max-width: 100%;
+  }
+}
+
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-nav--item {
+  align-self: center;
+  margin-left: 15px;
+}
+
+.search-form {
+  position: relative;
+  margin-top: 11px;
+
+  &--input {
+    background-color: $base-light-grey;
+    width: 100%;
+    padding: 12px;
+  }
+
+  &--btn {
+    background: none;
+    border: none;
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    padding: 0 4px;
+
+    i {
+      font-size: 22px;
+    }
+  }
+}
