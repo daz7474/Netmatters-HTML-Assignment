@@ -1,0 +1,32 @@
+// ==========================================================================
+// Base Styles
+// ==========================================================================
+
+* {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+// Lists
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+// Form elements
+
+input,
+textarea {
+  display: block;
+  outline: 0;
+  border: 0;
+}
+
+// Button
+
+button {
+  outline: 0;
+}
