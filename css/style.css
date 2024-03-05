@@ -270,6 +270,10 @@ button {
   margin-top: 0;
 }
 
+.nav-logo {
+  max-width: 100%;
+}
+
 .main-nav {
   display: flex;
   margin-left: auto;
@@ -278,11 +282,7 @@ button {
   padding-right: 15px;
 }
 
-#logo {
-  max-width: 100%;
-}
-
-.top-nav--item {
+.main-nav--item {
   width: 100%;
 }
 
