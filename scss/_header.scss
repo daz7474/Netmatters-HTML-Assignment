@@ -31,27 +31,70 @@
 }
 
 .header-logo {
+  align-self: center;
+
   img {
     max-width: 100%;
+    margin-top: 8px;
   }
 }
 
 .main-nav {
   display: flex;
-  justify-content: center;
-  max-width: 100%;
+  align-items: center;
+  padding-left: 10px;
+
+  i {
+    width: 100%;
+    color: $light-black;
+    font-size: 32px;
+  }
+
+  button {
+    background-color: $light-black;
+    border: none;
+    border-radius: 3px;
+    height: 56px;
+    padding: 5px 15px;
+    margin-left: 20px;
+  }
 }
 
-.main-nav--item {
-  align-self: center;
+.main-nav--item {}
+
+.menu-box {
+  display: inline-block;
+  position: relative;
+  width: 34px;
+  height: 24px;
 }
 
-.icon-phone_in_talk {
-  background: url(../img/phone_in_talk.png) no-repeat;
+.menu-inner {
   display: block;
-  width: 1.5em;
-  height: 1.5em;
-  margin-left: 15px;
+  top: 50%;
+  margin-top: 1px;
+  position: absolute;
+  width: 34px;
+  height: 4px;
+  background-color: $white;
+
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 34px;
+    height: 4px;
+    background-color: $white;
+  }
+
+  &::before {
+    top: -10px;
+  }
+
+  &::after {
+    bottom: -10px;
+  }
 }
 
 .search-form {
@@ -73,7 +116,7 @@
     background: none;
     border: none;
     position: absolute;
-    top: 0;
+    top: 14px;
     right: 5px;
   }
 

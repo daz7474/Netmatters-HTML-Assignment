@@ -3,7 +3,9 @@
 // ==========================================================================
 
 // Font Stacks
-$font-family-primary: 'Poppins', 'Helvetica', 'Arial', sans-serif;
+$font-url--google: 'https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700;900';
+
+$font-family-primary: 'Poppins', sans-serif;
 
 // Font Weights
 
@@ -13,9 +15,17 @@ $white: #fff;
 $light-grey: #ddd;
 $grey: #666;
 $dark-grey: #454555;
-$dark: #333645;
-$darker: #22242e;
+$light-black: #333645;
+$black: #000;
 $accent: #ccc;
+
+$hoki: #67809F;
+$havelock-blue: #4183d7;
+$shamrock: #2ecc71;
+$valencia: #d64541;
+$wisteria: #926fb1;
+$radical-red: #f62459;
+$punch: #ce4125;
 
 // Color Usage
 
