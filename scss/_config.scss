@@ -2,14 +2,18 @@
 // Global Config $
 // ==========================================================================
 
-// Font Stacks
+// Import if google fonts URL is defined
+
+@if variable-exists(font-url--google) {
+  @import url($font-url--google);
+}
+
+// Font styles
 $font-url--google: 'https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700;900';
 
-$font-family-primary: 'Poppins', sans-serif;
+$font-primary: 'Poppins', sans-serif;
 
-// Font Weights
-
-// Descriptive Base Colors
+// Base colors
 
 $white: #fff;
 $light-grey: #ddd;
@@ -19,28 +23,116 @@ $light-black: #333645;
 $black: #000;
 $accent: #ccc;
 
-$hoki: #67809F;
-$havelock-blue: #4183d7;
-$shamrock: #2ecc71;
-$valencia: #d64541;
-$wisteria: #926fb1;
-$radical-red: #f62459;
-$punch: #ce4125;
+// Card colours for buttons
 
-// Color Usage
+$bespoke-color: #67809f;
+$bespoke-color-hvr: #566c88;
 
-// Color Palette Modifiers
+$IT-color: #4183d7;
+$IT-color-hvr: #2a6ec6;
 
-// UI Colors
+$digital-color: #2ecc71;
+$digital-color-hvr: #25a25a;
 
-// Text
+$telecoms-color: #d64541;
+$telecoms-color-hvr: #bc2c28;
 
-// Border radius
-$br--default : .4em;
-$br--round : 50%;
+$web-color: #926fb1;
+$web-color-hvr: #7e57a0;
 
-// Transitions
-$trns-duration : .3s;
+$cyber-color: #f62459;
+$cyber-color-hvr: #de093f;
 
-// Path to Assets
-$path--rel : "../img";
+$developer-color: #ce4125;
+$developer-color-hvr: #ce4125;
+
+// Breakpoints
+
+$breakpoints: (
+  'xs': 767px,
+  'sm': 768px,
+  'md': 992px,
+  'lg': 1260px,
+);
+
+// Mixins
+
+// Media queries
+
+@mixin mq($break) {
+  $value: map-get($breakpoints, $break );
+  $sm: map-get($breakpoints, 'sm');
+
+  @if $value ==null {
+    @warn "`#{break}` is not a valid breakpoint name"
+  }
+
+  @else if $value <$sm {
+    @media (max-width: $value) {
+      @content;
+    }
+  }
+
+  @else {
+    @media (min-width: $value) {
+      @content;
+    }
+  }
+}
+
+// Card colors for cards map
+
+$card-colors: (
+  'bespoke': #67809f,
+  'IT': #4183d7,
+  'digital': #2ecc71,
+  'telecoms': #d64541,
+  'web': #926fb1,
+  'cyber': #f62459,
+  'developer': #ce4125,
+);
+
+// Card each loop
+
+@mixin cards($map) {
+
+  @each $services-card,
+  $card-color in $card-colors {
+    &-#{$services-card} {
+      .card-icon {
+        background-color: $card-color;
+      }
+
+      i {
+        color: $white;
+      }
+
+      .btn-card {
+        color: $white;
+        background-color: $card-color;
+      }
+
+    }
+
+    &-#{$services-card}:hover {
+      color: $white;
+      background-color: $card-color;
+      border-color: $card-color;
+      top: -10px;
+
+
+      .card-icon {
+        background-color: $white;
+      }
+
+      i {
+        color: $card-color;
+      }
+
+      .btn-card {
+        color: $card-color;
+        background-color: $white;
+      }
+    }
+  }
+}

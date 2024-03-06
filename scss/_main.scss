@@ -2,7 +2,20 @@
 // Main
 // ==========================================================================
 
-// Layout
+.container {
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+// Banner
 
 .banner {
   position: relative;
@@ -58,230 +71,143 @@
   }
 }
 
-.row {
-  margin-bottom: 50px;
+// Service cards
+
+// Service heading
+
+.services-heading {
+  font-size: 1.85rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  & h3 {
+    display: none;
+
+    @include mq('sm') {
+      display: block;
+      font-size: 1.625rem;
+    }
+  }
+
+  & h3:hover {
+    text-decoration: underline;
+  }
 }
 
-.col {
+// Services content layout
+
+.services-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+
+  @include mq('xs') {
+    width: 100%;
+  }
+
+  @include mq('sm') {
+    width: 750px;
+  }
+
+  @include mq('md') {
+    width: 970px;
+  }
+
+  @include mq('lg') {
+    width: 1200px;
+  }
+}
+
+// Each services card layout
+
+.card {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
   position: relative;
   top: 0;
+  text-align: center;
+  color: $dark-grey;
+  background-color: $white;
   border: 1px solid $accent;
   border-radius: 15px;
-  box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
-  text-align: center;
+  box-shadow: 0 3px 35px rgba(0, 0, 0, .1);
   padding: 30px;
-  margin: 1.5em .8em .8em;
+  margin-top: 30px;
   cursor: pointer;
   transition: .5s ease;
 
-  h2,
-  p {
-    font-weight: 400;
-  }
+  @include cards($card-colors);
 
-  &-1:hover {
-    top: -10px;
-    background-color: $hoki;
+  @include mq('xs') {
+    flex: 1 1 100%;
+    max-width: 100%;
+    margin-left: 15px;
+    margin-right: 15px;
 
-    .icon {
-      background-color: $white;
-
-      &-1 {
-        color: $hoki;
-      }
-    }
-
-    h2,
-    p {
-      color: $white;
-    }
-
-    .btn {
-      background-color: $white;
-      color: $hoki;
+    &:last-child {
+      margin-bottom: 0;
     }
   }
 
-  &-2:hover {
-    top: -10px;
-    background-color: $havelock-blue;
+  @include mq('sm') {
+    max-width: 720px;
+    flex-basis: 720px;
+    padding: 30px;
+    margin-left: 15px;
+    margin-right: 15px;
 
-    .icon {
-      background-color: $white;
-
-      &-2 {
-        color: $havelock-blue;
-      }
+    &:nth-child(n+4) {
+      flex-basis: 345px;
+      max-width: 345px;
     }
 
-    h2,
-    p {
-      color: $white;
-    }
-
-    .btn {
-      background-color: $white;
-      color: $havelock-blue;
+    &:nth-child(n+6) {
+      margin-bottom: 0;
     }
   }
 
-  &-3:hover {
-    top: -10px;
-    background-color: $shamrock;
+  @include mq('md') {
+    max-width: 293px;
+    flex-basis: 293px;
 
-    .icon {
-      background-color: $white;
-
-      &-3 {
-        color: $shamrock;
-      }
-    }
-
-    h2,
-    p {
-      color: $white;
-    }
-
-    .btn {
-      background-color: $white;
-      color: $shamrock;
+    &:nth-child(n+4) {
+      flex-basis: 455px;
+      max-width: 455px;
     }
   }
 
-  &-4:hover {
-    top: -10px;
-    background-color: $valencia;
+  @include mq('lg') {
+    max-width: 370px;
+    flex-basis: 370px;
 
-    .icon {
-      background-color: $white;
-
-      &-4 {
-        color: $valencia;
-      }
-    }
-
-    h2,
-    p {
-      color: $white;
-    }
-
-    .btn {
-      background-color: $white;
-      color: $valencia;
-    }
-  }
-
-  &-5:hover {
-    top: -10px;
-    background-color: $wisteria;
-
-    .icon {
-      background-color: $white;
-
-      &-5 {
-        color: $wisteria;
-      }
-    }
-
-    h2,
-    p {
-      color: $white;
-    }
-
-    .btn {
-      background-color: $white;
-      color: $wisteria;
-    }
-  }
-
-  &-6:hover {
-    top: -10px;
-    background-color: $radical-red;
-
-    .icon {
-      background-color: $white;
-
-      &-6 {
-        color: $radical-red;
-      }
-    }
-
-    h2,
-    p {
-      color: $white;
-    }
-
-    .btn {
-      background-color: $white;
-      color: $radical-red;
-    }
-  }
-
-  &-7:hover {
-    top: -10px;
-    background-color: $punch;
-
-    .icon {
-      background-color: $white;
-
-      &-7 {
-        color: $punch;
-      }
-    }
-
-    h2,
-    p {
-      color: $white;
-    }
-
-    .btn {
-      background-color: $white;
-      color: $punch;
+    &:nth-child(n+4) {
+      max-width: 270px;
+      flex-basis: 270px;
+      margin-bottom: 0;
     }
   }
 }
 
-.icon {
+// Each cards icon layout
+
+.card-icon {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 65px;
   height: 65px;
-  border-radius: 50%;
-  font-size: 30px;
+  font-size: 23px;
   color: $white;
-
-  &-1 {
-    background-color: $hoki;
-  }
-
-  &-2 {
-    background-color: $havelock-blue;
-  }
-
-  &-3 {
-    background-color: $shamrock;
-  }
-
-  &-4 {
-    background-color: $valencia;
-  }
-
-  &-5 {
-    background-color: $wisteria;
-  }
-
-  &-6 {
-    background-color: $radical-red;
-  }
-
-  &-7 {
-    background-color: $punch;
-  }
+  border: 0px solid transparent;
+  border-radius: 50%;
+  margin: 0 auto 17px;
 }
+
+// Services heading
 
 .view-services-heading {
   font-size: 25px;
@@ -291,48 +217,16 @@
   &:hover {
     text-decoration: underline;
   }
-}
 
-// Buttons
-
-.btn {
-  display: inline-block;
-  font-size: 18px;
-  color: $white;
-  text-align: center;
-  text-transform: uppercase;
-  background: $light-black;
-  padding: 5px 15px;
-  border: 1px solid transparent;
-  border-radius: 3px;
-  cursor: pointer;
-  margin: 20px 0;
-
-  &-1 {
-    background-color: $hoki;
+  @include mq('sm') {
+    display: none;
   }
 
-  &-2 {
-    background-color: $havelock-blue;
+  @include mq('md') {
+    display: none;
   }
 
-  &-3 {
-    background-color: $shamrock;
-  }
-
-  &-4 {
-    background-color: $valencia;
-  }
-
-  &-5 {
-    background-color: $wisteria;
-  }
-
-  &-6 {
-    background-color: $radical-red;
-  }
-
-  &-7 {
-    background-color: $punch;
+  @include mq('lg') {
+    display: none;
   }
 }

@@ -11,14 +11,9 @@
   }
 
   @include mq('lg') {
-    width: 1260px;
+    width: 1200px;
     margin: 0 auto;
   }
-}
-
-.nav-inner-container {
-  margin: 0 auto;
-  padding: 0 15px;
 }
 
 .nav-row {
@@ -59,8 +54,6 @@
     margin-left: 20px;
   }
 }
-
-.main-nav--item {}
 
 .menu-box {
   display: inline-block;
@@ -106,9 +99,7 @@
     background-color: $light-grey;
     outline: 1px solid hsla(0, 0%, 100%, 0.2);
     border: 2px solid rgba(0, 0, 0, 0.1);
-    width: 100%;
     height: 50px;
-    padding: 15px;
     padding-right: 40px;
   }
 

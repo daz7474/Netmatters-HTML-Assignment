@@ -1,0 +1,72 @@
+// Buttons
+
+.btn {
+  display: inline-block;
+  color: $white;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 35px;
+  background: $light-black;
+  padding: 5px 15px;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+// Service button colors
+
+.btn-bespoke {
+  background-color: $bespoke-color;
+
+  &:hover {
+    background-color: $bespoke-color-hvr;
+  }
+}
+
+.btn-IT {
+  background-color: $IT-color;
+
+  &:hover {
+    background-color: $IT-color-hvr;
+  }
+}
+
+.btn-digital {
+  background-color: $digital-color;
+
+  &:hover {
+    background-color: $digital-color-hvr;
+  }
+}
+
+.btn-telecoms {
+  background-color: $telecoms-color;
+
+  &:hover {
+    background-color: $telecoms-color-hvr;
+  }
+}
+
+.btn-web {
+  background-color: $web-color;
+
+  &:hover {
+    background-color: $web-color-hvr;
+  }
+}
+
+.btn-cyber {
+  background-color: $cyber-color;
+
+  &:hover {
+    background-color: $cyber-color-hvr;
+  }
+}
+
+.btn-developer {
+  background-color: $developer-color;
+
+  &:hover {
+    background-color: $developer-color-hvr;
+  }
+}
