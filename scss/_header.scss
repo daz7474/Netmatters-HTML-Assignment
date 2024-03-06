@@ -38,34 +38,46 @@
 
 .main-nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  max-width: 100%;
 }
 
 .main-nav--item {
   align-self: center;
+}
+
+.icon-phone_in_talk {
+  background: url(../img/phone_in_talk.png) no-repeat;
+  display: block;
+  width: 1.5em;
+  height: 1.5em;
   margin-left: 15px;
 }
 
 .search-form {
   position: relative;
+  font-size: 14px;
   margin-top: 11px;
 
   &--input {
-    background-color: $base-light-grey;
+    background-color: $light-grey;
+    outline: 1px solid hsla(0, 0%, 100%, 0.2);
+    border: 2px solid rgba(0, 0, 0, 0.1);
     width: 100%;
-    padding: 12px;
+    height: 50px;
+    padding: 15px;
+    padding-right: 40px;
   }
 
   &--btn {
     background: none;
     border: none;
     position: absolute;
+    top: 0;
     right: 5px;
-    top: 10px;
-    padding: 0 4px;
+  }
 
-    i {
-      font-size: 22px;
-    }
+  i {
+    font-size: 20px;
   }
 }

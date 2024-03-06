@@ -54,6 +54,7 @@ template {
 
 a {
   background: transparent;
+  text-decoration: none;
 }
 
 a:active,
@@ -251,14 +252,71 @@ button {
   outline: 0;
 }
 
-.banner {
-  width: 100%;
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
-.img {
-  background: url(../img/banner/lead-banner.webp) center/cover no-repeat;
+.banner {
+  position: relative;
   width: 100%;
   height: 550px;
+}
+.banner--img {
+  background: url(../img/banner/lead-banner.webp) center/cover no-repeat;
+  z-index: 0;
+}
+
+.banner-content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.banner-content {
+  flex-wrap: wrap;
+  position: absolute;
+  top: 20%;
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  z-index: 1;
+}
+.banner-content h1 {
+  font-size: 2.5rem;
+  line-height: 3rem;
+  margin: 0 0 1.25rem;
+}
+.banner-content p {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  margin-bottom: 0.375rem;
+}
+.banner-content a {
+  font-size: 1.25rem;
+  line-height: 2.5rem;
+  padding: 5px 20px;
+  margin-top: 1.938rem;
+  margin-bottom: 1.125rem;
+  text-transform: uppercase;
+  background-color: #926fb1;
+}
+.banner-content i {
+  margin-left: 13px;
+}
+
+.btn {
+  display: inline-block;
+  font-size: 18px;
+  color: #fff;
+  background: #333;
+  padding: 5px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  margin: 20px 0;
 }
 
 .nav-container {
@@ -296,33 +354,45 @@ button {
 
 .main-nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  max-width: 100%;
 }
 
 .main-nav--item {
   align-self: center;
+}
+
+.icon-phone_in_talk {
+  background: url(../img/phone_in_talk.png) no-repeat;
+  display: block;
+  width: 1.5em;
+  height: 1.5em;
   margin-left: 15px;
 }
 
 .search-form {
   position: relative;
+  font-size: 14px;
   margin-top: 11px;
 }
 .search-form--input {
   background-color: #ddd;
+  outline: 1px solid hsla(0, 0%, 100%, 0.2);
+  border: 2px solid rgba(0, 0, 0, 0.1);
   width: 100%;
-  padding: 12px;
+  height: 50px;
+  padding: 15px;
+  padding-right: 40px;
 }
 .search-form--btn {
   background: none;
   border: none;
   position: absolute;
+  top: 0;
   right: 5px;
-  top: 10px;
-  padding: 0 4px;
 }
-.search-form--btn i {
-  font-size: 22px;
+.search-form i {
+  font-size: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */
