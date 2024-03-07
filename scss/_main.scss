@@ -102,9 +102,9 @@
   }
 }
 
-// Partners section
+// Carousel section
 
-.partner-container {
+.carousel-container {
   display: flex;
   justify-content: center;
 
@@ -121,6 +121,7 @@
 
       & img {
         filter: grayscale(1);
+        max-height: 100%;
       }
 
       & img:hover {
@@ -186,5 +187,15 @@
     & .col {
       width: 50%;
     }
+  }
+}
+
+// Newsletter
+
+.newsletter {
+  background-color: #dddddd;
+
+  & .required {
+    color: red;
   }
 }

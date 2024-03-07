@@ -423,8 +423,18 @@ button {
   top: -10px;
 }
 .latest-news .col .item {
+  position: relative;
+  top: 0;
   font-size: 0.8125rem;
   margin-top: 30px;
+}
+.latest-news .col .item-link {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
 }
 .latest-news .col .img-container {
   position: relative;
@@ -627,7 +637,7 @@ button {
   background-color: #ce4125;
 }
 .btn-developer:hover {
-  background-color: #ce4125;
+  background-color: #bd3519;
 }
 .btn-brand {
   border-radius: 6px;
@@ -935,14 +945,14 @@ button {
   margin-left: 13px;
 }
 
-.partner-container {
+.carousel-container {
   display: flex;
   justify-content: center;
 }
-.partner-container .item-container {
+.carousel-container .item-container {
   margin-right: 50px;
 }
-.partner-container .item-container .item {
+.carousel-container .item-container .item {
   display: flex;
   align-items: center;
   width: auto;
@@ -950,10 +960,11 @@ button {
   max-height: 70px;
   padding: 0 20px;
 }
-.partner-container .item-container .item img {
+.carousel-container .item-container .item img {
   filter: grayscale(1);
+  max-height: 100%;
 }
-.partner-container .item-container .item img:hover {
+.carousel-container .item-container .item img:hover {
   filter: grayscale(0);
 }
 
@@ -1001,6 +1012,13 @@ button {
   .welcome-container .col {
     width: 50%;
   }
+}
+
+.newsletter {
+  background-color: #dddddd;
+}
+.newsletter .required {
+  color: red;
 }
 
 /*# sourceMappingURL=style.css.map */
