@@ -19,11 +19,24 @@ $white: #fff;
 $light-grey: #ddd;
 $grey: #666;
 $dark-grey: #454555;
-$light-black: #333645;
+$light-black: #272936;
+$light-black-hvr: #121318;
 $black: #000;
 $accent: #ccc;
+$quote-author: #a3a8ac;
+
+// Brand colors
+
+$brand-primary: #333645;
+$brand-google: #4387f6;
+$brand-google-hvr: #166af4;
+$brand-trustpilot: #00b67b;
+$brand-trustpilot-hvr: #009b69;
 
 // Card colours for buttons
+
+$search-color: #999aa2;
+$search-color-hvr: #74747a;
 
 $bespoke-color: #67809f;
 $bespoke-color-hvr: #566c88;
@@ -46,6 +59,57 @@ $cyber-color-hvr: #de093f;
 $developer-color: #ce4125;
 $developer-color-hvr: #ce4125;
 
+// Card colors for card map
+
+$card-colors: (
+  'bespoke': #67809f,
+  'IT': #4183d7,
+  'digital': #2ecc71,
+  'telecoms': #d64541,
+  'web': #926fb1,
+  'cyber': #f62459,
+  'developer': #ce4125,
+);
+
+// Card each loop
+
+@mixin cards($map) {
+
+  @each $service,
+  $card-color in $card-colors {
+    &-#{$service} {
+      .card-icon {
+        background-color: $card-color;
+        color: $white;
+      }
+
+      .btn-card {
+        color: $white;
+        background-color: $card-color;
+      }
+
+    }
+
+    &-#{$service}:hover {
+      color: $white;
+      background-color: $card-color;
+      border-color: $card-color;
+      top: -10px;
+
+
+      .card-icon {
+        background-color: $white;
+        color: $card-color;
+      }
+
+      .btn-card {
+        color: $card-color;
+        background-color: $white;
+      }
+    }
+  }
+}
+
 // Breakpoints
 
 $breakpoints: (
@@ -54,8 +118,6 @@ $breakpoints: (
   'md': 992px,
   'lg': 1260px,
 );
-
-// Mixins
 
 // Media queries
 
@@ -76,63 +138,6 @@ $breakpoints: (
   @else {
     @media (min-width: $value) {
       @content;
-    }
-  }
-}
-
-// Card colors for cards map
-
-$card-colors: (
-  'bespoke': #67809f,
-  'IT': #4183d7,
-  'digital': #2ecc71,
-  'telecoms': #d64541,
-  'web': #926fb1,
-  'cyber': #f62459,
-  'developer': #ce4125,
-);
-
-// Card each loop
-
-@mixin cards($map) {
-
-  @each $services-card,
-  $card-color in $card-colors {
-    &-#{$services-card} {
-      .card-icon {
-        background-color: $card-color;
-      }
-
-      i {
-        color: $white;
-      }
-
-      .btn-card {
-        color: $white;
-        background-color: $card-color;
-      }
-
-    }
-
-    &-#{$services-card}:hover {
-      color: $white;
-      background-color: $card-color;
-      border-color: $card-color;
-      top: -10px;
-
-
-      .card-icon {
-        background-color: $white;
-      }
-
-      i {
-        color: $card-color;
-      }
-
-      .btn-card {
-        color: $card-color;
-        background-color: $white;
-      }
     }
   }
 }

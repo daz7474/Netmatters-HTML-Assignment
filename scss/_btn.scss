@@ -1,4 +1,4 @@
-// Buttons
+// Default button style
 
 .btn {
   display: inline-block;
@@ -8,65 +8,150 @@
   line-height: 35px;
   background: $light-black;
   padding: 5px 15px;
+  margin-top: auto;
   border: 1px solid transparent;
   border-radius: 3px;
   cursor: pointer;
-}
 
-// Service button colors
+  &-support {
+    display: none;
 
-.btn-bespoke {
-  background-color: $bespoke-color;
+    @include mq('md') {
+      display: flex;
+      align-items: center;
+      background-color: $IT-color;
+      height: 56px;
 
-  &:hover {
-    background-color: $bespoke-color-hvr;
+      &:hover {
+        background-color: $IT-color-hvr;
+      }
+
+      &>i {
+        margin-right: 10px;
+      }
+    }
   }
-}
 
-.btn-IT {
-  background-color: $IT-color;
+  &-contact {
+    display: none;
 
-  &:hover {
-    background-color: $IT-color-hvr;
+    @include mq('md') {
+      display: flex;
+      align-items: center;
+      background-color: $search-color;
+      height: 56px;
+      margin-left: 20px;
+
+      &:hover {
+        background-color: $search-color-hvr;
+      }
+
+      &>i {
+        margin-right: 10px;
+      }
+    }
   }
-}
 
-.btn-digital {
-  background-color: $digital-color;
+  // Service button colors
 
-  &:hover {
-    background-color: $digital-color-hvr;
+  &-bespoke {
+    background-color: $bespoke-color;
+
+    &:hover {
+      background-color: $bespoke-color-hvr;
+    }
   }
-}
 
-.btn-telecoms {
-  background-color: $telecoms-color;
+  &-IT {
+    background-color: $IT-color;
 
-  &:hover {
-    background-color: $telecoms-color-hvr;
+    &:hover {
+      background-color: $IT-color-hvr;
+    }
   }
-}
 
-.btn-web {
-  background-color: $web-color;
+  &-digital {
+    background-color: $digital-color;
 
-  &:hover {
-    background-color: $web-color-hvr;
+    &:hover {
+      background-color: $digital-color-hvr;
+    }
   }
-}
 
-.btn-cyber {
-  background-color: $cyber-color;
+  &-telecoms {
+    background-color: $telecoms-color;
 
-  &:hover {
-    background-color: $cyber-color-hvr;
+    &:hover {
+      background-color: $telecoms-color-hvr;
+    }
   }
-}
 
-.btn-developer {
-  background-color: $developer-color;
+  &-web {
+    background-color: $web-color;
 
-  &:hover {
-    background-color: $developer-color-hvr;
+    &:hover {
+      background-color: $web-color-hvr;
+    }
+  }
+
+  &-cyber {
+    background-color: $cyber-color;
+
+    &:hover {
+      background-color: $cyber-color-hvr;
+    }
+  }
+
+  &-developer {
+    background-color: $developer-color;
+
+    &:hover {
+      background-color: $developer-color-hvr;
+    }
+  }
+
+  &-brand {
+    border-radius: 6px;
+    padding: 10px 30px;
+    margin-bottom: 17px;
+
+    &:hover {
+      background-color: $light-black-hvr;
+    }
+
+    @include mq('lg') {
+      margin-top: auto;
+    }
+  }
+
+  &-google {
+    background-color: $brand-google;
+    border-radius: 6px;
+    padding: 10px 30px;
+    margin-top: 20px;
+    margin-right: 8px;
+
+    &:hover {
+      background-color: $brand-google-hvr;
+    }
+
+    @include mq('lg') {
+      margin-top: auto;
+    }
+  }
+
+  &-trustpilot {
+    background-color: $brand-trustpilot;
+    border-radius: 6px;
+    padding: 10px 30px;
+    margin-top: 20px;
+
+    &:hover {
+      background-color: $brand-trustpilot-hvr;
+    }
+
+    @include mq('lg') {
+      margin-top: auto;
+    }
   }
 }

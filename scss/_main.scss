@@ -2,12 +2,25 @@
 // Main
 // ==========================================================================
 
+// Containers
+
 .container {
-  max-width: 1200px;
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px;
+
+  @include mq('sm') {
+    max-width: 740px;
+  }
+
+  @include mq('md') {
+    max-width: 970px;
+  }
+
+  @include mq('lg') {
+    max-width: 1200px;
+  }
 }
 
 .section {
@@ -15,7 +28,32 @@
   padding-bottom: 50px;
 }
 
-// Banner
+.row {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.col {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+// Headings
+
+.h2 {
+  font-size: 1.3rem;
+  padding-bottom: 10px;
+  margin: 0 0 11px
+}
+
+.p {
+  font-size: .8125rem;
+  line-height: 1.375rem;
+  margin-bottom: 13px;
+  font-weight: 400;
+}
+
+// Hero banner
 
 .banner {
   position: relative;
@@ -57,176 +95,94 @@
     margin-bottom: 0.375rem;
   }
 
-  a {
-    font-size: 1.25rem;
-    line-height: 2.5rem;
-    padding: 5px 20px;
-    margin-top: 1.938rem;
-    margin-bottom: 1.125rem;
-    background-color: #926fb1;
-  }
-
   i {
     margin-left: 13px;
   }
 }
 
-// Service cards
+// Partners section
 
-// Service heading
-
-.services-heading {
-  font-size: 1.85rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  & h3 {
-    display: none;
-
-    @include mq('sm') {
-      display: block;
-      font-size: 1.625rem;
-    }
-  }
-
-  & h3:hover {
-    text-decoration: underline;
-  }
-}
-
-// Services content layout
-
-.services-content {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 0 auto;
-
-  @include mq('xs') {
-    width: 100%;
-  }
-
-  @include mq('sm') {
-    width: 750px;
-  }
-
-  @include mq('md') {
-    width: 970px;
-  }
-
-  @include mq('lg') {
-    width: 1200px;
-  }
-}
-
-// Each services card layout
-
-.card {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  position: relative;
-  top: 0;
-  text-align: center;
-  color: $dark-grey;
-  background-color: $white;
-  border: 1px solid $accent;
-  border-radius: 15px;
-  box-shadow: 0 3px 35px rgba(0, 0, 0, .1);
-  padding: 30px;
-  margin-top: 30px;
-  cursor: pointer;
-  transition: .5s ease;
-
-  @include cards($card-colors);
-
-  @include mq('xs') {
-    flex: 1 1 100%;
-    max-width: 100%;
-    margin-left: 15px;
-    margin-right: 15px;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
-
-  @include mq('sm') {
-    max-width: 720px;
-    flex-basis: 720px;
-    padding: 30px;
-    margin-left: 15px;
-    margin-right: 15px;
-
-    &:nth-child(n+4) {
-      flex-basis: 345px;
-      max-width: 345px;
-    }
-
-    &:nth-child(n+6) {
-      margin-bottom: 0;
-    }
-  }
-
-  @include mq('md') {
-    max-width: 293px;
-    flex-basis: 293px;
-
-    &:nth-child(n+4) {
-      flex-basis: 455px;
-      max-width: 455px;
-    }
-  }
-
-  @include mq('lg') {
-    max-width: 370px;
-    flex-basis: 370px;
-
-    &:nth-child(n+4) {
-      max-width: 270px;
-      flex-basis: 270px;
-      margin-bottom: 0;
-    }
-  }
-}
-
-// Each cards icon layout
-
-.card-icon {
+.partner-container {
   display: flex;
   justify-content: center;
-  align-items: center;
-  width: 65px;
-  height: 65px;
-  font-size: 23px;
+
+  .item-container {
+    margin-right: 50px;
+
+    & .item {
+      display: flex;
+      align-items: center;
+      width: auto;
+      height: 70px;
+      max-height: 70px;
+      padding: 0 20px;
+
+      & img {
+        filter: grayscale(1);
+      }
+
+      & img:hover {
+        filter: grayscale(0);
+      }
+    }
+  }
+}
+
+// Welcome & testimony section
+
+.brand-background {
+  background-color: $brand-primary;
   color: $white;
-  border: 0px solid transparent;
-  border-radius: 50%;
-  margin: 0 auto 17px;
 }
 
-// Services heading
-
-.view-services-heading {
-  font-size: 25px;
-  text-align: center;
-  margin: 15px 0;
-
-  &:hover {
-    text-decoration: underline;
+.welcome-container {
+  & h2 {
+    font-size: 2.25rem;
+    margin-top: -6px;
+    margin-bottom: 40px;
   }
 
-  @include mq('sm') {
-    display: none;
+  & p {
+    line-height: 1.875rem;
+    margin-bottom: 25px;
+
+    & a:link,
+    & a:visited {
+      color: $white;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .star-container {
+    color: #ffa500;
+    font-size: 38px;
+    margin-bottom: 25px;
+  }
+
+  .quote {
+    font-weight: 600;
+    font-size: 1.3rem;
+    font-style: italic;
+
+    &-author {
+      font-size: 1.1rem;
+      color: $quote-author;
+    }
+
+    &-author a:link,
+    &-author a:visited {
+      color: $white;
+    }
   }
 
   @include mq('md') {
-    display: none;
-  }
+    display: flex;
 
-  @include mq('lg') {
-    display: none;
+    & .col {
+      width: 50%;
+    }
   }
 }
