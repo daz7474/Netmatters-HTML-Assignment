@@ -209,3 +209,55 @@
     display: none;
   }
 }
+
+// Main navigation
+
+.main-navigation {
+  display: none;
+
+  @include mq('md') {
+    display: block;
+    position: relative;
+    background-color: $brand-primary;
+  }
+
+  & ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+
+    & li {
+      text-align: center;
+
+      & a {
+        display: block;
+        position: relative;
+        color: $white;
+        font-size: 1.125rem;
+        text-transform: uppercase;
+        text-decoration: none;
+        line-height: 1;
+        padding: 19px 0 18px;
+
+        & i {
+          display: block;
+          font-size: 1.438rem;
+          padding-bottom: 10px;
+        }
+
+        & small {
+          display: block;
+          font-size: .625rem;
+          padding-bottom: 1px;
+        }
+      }
+    }
+
+    & .item {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+  }
+}

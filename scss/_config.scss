@@ -100,6 +100,10 @@ $card-colors: (
         background-color: $card-color;
       }
 
+      .service-nav-i {
+        color: $card-color;
+      }
+
     }
 
     &-#{$service}:hover {
@@ -117,6 +121,10 @@ $card-colors: (
       .btn-card {
         color: $card-color;
         background-color: $white;
+      }
+
+      .service-nav-i {
+        color: $white;
       }
     }
   }

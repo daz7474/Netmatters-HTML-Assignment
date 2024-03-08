@@ -16,6 +16,50 @@ body {
   margin-bottom: 0;
 }
 
+.h1,
+h1 {
+  font-size: 2.25rem;
+  font-weight: 400;
+  margin: 0 0 28px;
+}
+
+.h2,
+h2 {
+  font-size: 2rem;
+}
+
+.h2,
+.h3,
+.h4,
+h2,
+h3,
+h4 {
+  font-weight: 400;
+  margin: 0 0 15px;
+}
+
+.h3,
+.h4,
+h3,
+h4 {
+  font-size: 1.25rem;
+}
+
+.h3,
+h3 {
+  font-size: 1.625rem;
+}
+
+.h4,
+h4 {
+  font-size: 1rem;
+}
+
+p {
+  line-height: 1.875rem;
+  margin-bottom: 25px;
+}
+
 a {
   text-decoration: none;
 }
@@ -97,7 +141,7 @@ button {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 0 auto;
+  position: relative;
 }
 @media (max-width: 767px) {
   .services-content {
@@ -107,6 +151,7 @@ button {
 @media (min-width: 768px) {
   .services-content {
     width: 750px;
+    left: -14px;
   }
 }
 @media (min-width: 992px) {
@@ -146,6 +191,9 @@ button {
   color: #fff;
   background-color: #67809f;
 }
+.card-bespoke .service-nav-i {
+  color: #67809f;
+}
 .card-bespoke:hover {
   color: #fff;
   background-color: #67809f;
@@ -160,6 +208,9 @@ button {
   color: #67809f;
   background-color: #fff;
 }
+.card-bespoke:hover .service-nav-i {
+  color: #fff;
+}
 .card-IT .card-icon {
   background-color: #4183d7;
   color: #fff;
@@ -167,6 +218,9 @@ button {
 .card-IT .btn-card {
   color: #fff;
   background-color: #4183d7;
+}
+.card-IT .service-nav-i {
+  color: #4183d7;
 }
 .card-IT:hover {
   color: #fff;
@@ -182,6 +236,9 @@ button {
   color: #4183d7;
   background-color: #fff;
 }
+.card-IT:hover .service-nav-i {
+  color: #fff;
+}
 .card-digital .card-icon {
   background-color: #2ecc71;
   color: #fff;
@@ -189,6 +246,9 @@ button {
 .card-digital .btn-card {
   color: #fff;
   background-color: #2ecc71;
+}
+.card-digital .service-nav-i {
+  color: #2ecc71;
 }
 .card-digital:hover {
   color: #fff;
@@ -204,6 +264,9 @@ button {
   color: #2ecc71;
   background-color: #fff;
 }
+.card-digital:hover .service-nav-i {
+  color: #fff;
+}
 .card-telecoms .card-icon {
   background-color: #d64541;
   color: #fff;
@@ -211,6 +274,9 @@ button {
 .card-telecoms .btn-card {
   color: #fff;
   background-color: #d64541;
+}
+.card-telecoms .service-nav-i {
+  color: #d64541;
 }
 .card-telecoms:hover {
   color: #fff;
@@ -226,6 +292,9 @@ button {
   color: #d64541;
   background-color: #fff;
 }
+.card-telecoms:hover .service-nav-i {
+  color: #fff;
+}
 .card-web .card-icon {
   background-color: #926fb1;
   color: #fff;
@@ -233,6 +302,9 @@ button {
 .card-web .btn-card {
   color: #fff;
   background-color: #926fb1;
+}
+.card-web .service-nav-i {
+  color: #926fb1;
 }
 .card-web:hover {
   color: #fff;
@@ -248,6 +320,9 @@ button {
   color: #926fb1;
   background-color: #fff;
 }
+.card-web:hover .service-nav-i {
+  color: #fff;
+}
 .card-cyber .card-icon {
   background-color: #f62459;
   color: #fff;
@@ -255,6 +330,9 @@ button {
 .card-cyber .btn-card {
   color: #fff;
   background-color: #f62459;
+}
+.card-cyber .service-nav-i {
+  color: #f62459;
 }
 .card-cyber:hover {
   color: #fff;
@@ -270,6 +348,9 @@ button {
   color: #f62459;
   background-color: #fff;
 }
+.card-cyber:hover .service-nav-i {
+  color: #fff;
+}
 .card-developer .card-icon {
   background-color: #ce4125;
   color: #fff;
@@ -277,6 +358,9 @@ button {
 .card-developer .btn-card {
   color: #fff;
   background-color: #ce4125;
+}
+.card-developer .service-nav-i {
+  color: #ce4125;
 }
 .card-developer:hover {
   color: #fff;
@@ -291,6 +375,9 @@ button {
 .card-developer:hover .btn-card {
   color: #ce4125;
   background-color: #fff;
+}
+.card-developer:hover .service-nav-i {
+  color: #fff;
 }
 @media (max-width: 767px) {
   .card {
@@ -548,6 +635,7 @@ button {
 
 .btn {
   display: inline-block;
+  font-size: 1.063rem;
   color: #fff;
   text-align: center;
   text-transform: uppercase;
@@ -561,6 +649,11 @@ button {
 }
 .btn:hover {
   background-color: #121318;
+}
+.btn-lg {
+  font-size: 1.25rem;
+  line-height: 50px;
+  padding: 5px 20px;
 }
 .btn-support {
   display: none;
@@ -640,6 +733,7 @@ button {
   background-color: #bd3519;
 }
 .btn-brand {
+  font-size: 20px;
   border-radius: 6px;
   padding: 10px 30px;
   margin-bottom: 17px;
@@ -869,6 +963,51 @@ button {
   }
 }
 
+.main-navigation {
+  display: none;
+}
+@media (min-width: 992px) {
+  .main-navigation {
+    display: block;
+    position: relative;
+    background-color: #333645;
+  }
+}
+.main-navigation ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style: none;
+}
+.main-navigation ul li {
+  text-align: center;
+}
+.main-navigation ul li a {
+  display: block;
+  position: relative;
+  color: #fff;
+  font-size: 1.125rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  line-height: 1;
+  padding: 19px 0 18px;
+}
+.main-navigation ul li a i {
+  display: block;
+  font-size: 1.438rem;
+  padding-bottom: 10px;
+}
+.main-navigation ul li a small {
+  display: block;
+  font-size: 0.625rem;
+  padding-bottom: 1px;
+}
+.main-navigation ul .item {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
 .container {
   margin-right: auto;
   margin-left: auto;
@@ -922,7 +1061,6 @@ button {
 .banner {
   position: relative;
   width: 100%;
-  height: 550px;
 }
 .banner .item {
   display: flex;
@@ -930,7 +1068,7 @@ button {
   justify-content: center;
   position: relative;
   width: 100%;
-  height: 100%;
+  min-height: 550px;
   background-color: #000;
 }
 .banner .item .img-container {
@@ -984,6 +1122,7 @@ button {
   margin: 0 0 1.25rem;
 }
 .banner .item-content i {
+  margin-right: -4px;
   margin-left: 13px;
 }
 @media (min-width: 992px) {

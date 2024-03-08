@@ -68,7 +68,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 0 auto;
+  position: relative;
 
   @include mq('xs') {
     width: 100%;
@@ -76,6 +76,7 @@
 
   @include mq('sm') {
     width: 750px;
+    left: -14px;
   }
 
   @include mq('md') {
