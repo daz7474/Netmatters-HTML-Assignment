@@ -102,33 +102,33 @@
       position: relative;
       top: 0;
 
-      & .news-tag-1,
-      & .news-tag-2,
-      & .news-tag-3 {
-        position: absolute;
-        right: 0;
-        top: 10px;
-        background-color: $bespoke-color;
-        color: $white;
-        text-transform: uppercase;
-        font-size: 0.75rem;
-        font-weight: 600;
-        line-height: 1.428rem;
-        padding: 0 10px;
-      }
-
-      & .news-tag-2 {
-        background-color: $web-color;
-      }
-
-      & .news-tag-3 {
-        background-color: $developer-color;
-      }
-
       & img {
         width: 100%;
         height: auto;
       }
+    }
+
+    & .news-tag-1,
+    & .news-tag-2,
+    & .news-tag-3 {
+      position: absolute;
+      right: 0;
+      top: 10px;
+      background-color: $bespoke-color;
+      color: $white;
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      font-weight: 600;
+      line-height: 1.428rem;
+      padding: 0 10px;
+    }
+
+    & .news-tag-2 {
+      background-color: $web-color;
+    }
+
+    & .news-tag-3 {
+      background-color: $developer-color;
     }
 
     & .content {

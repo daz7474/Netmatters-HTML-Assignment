@@ -440,7 +440,11 @@ button {
   position: relative;
   top: 0;
 }
-.latest-news .col .img-container .news-tag-1, .latest-news .col .img-container .news-tag-2, .latest-news .col .img-container .news-tag-3 {
+.latest-news .col .img-container img {
+  width: 100%;
+  height: auto;
+}
+.latest-news .col .news-tag-1, .latest-news .col .news-tag-2, .latest-news .col .news-tag-3 {
   position: absolute;
   right: 0;
   top: 10px;
@@ -452,15 +456,11 @@ button {
   line-height: 1.428rem;
   padding: 0 10px;
 }
-.latest-news .col .img-container .news-tag-2 {
+.latest-news .col .news-tag-2 {
   background-color: #926fb1;
 }
-.latest-news .col .img-container .news-tag-3 {
+.latest-news .col .news-tag-3 {
   background-color: #ce4125;
-}
-.latest-news .col .img-container img {
-  width: 100%;
-  height: auto;
 }
 .latest-news .col .content {
   border: 1px solid #ccc;
