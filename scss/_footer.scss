@@ -1,0 +1,145 @@
+// Footer
+
+footer {
+  background-color: $footer;
+  padding: 27px 0 0;
+
+  @include mq('lg') {
+    padding-top: 47px;
+  }
+
+  .footer-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    & .company-info {
+      @include mq('xs') {
+        width: 100%;
+      }
+
+      width: 400px;
+
+      & img {
+        width: 320px;
+      }
+
+      & h4 {
+        color: $white;
+        margin: 26px 0;
+      }
+
+      & .company-socials {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        max-width: 300px;
+        margin-bottom: 30px;
+
+        @include mq('2xs') {
+          flex-wrap: wrap;
+        }
+
+        & a {
+          width: 35%;
+          font-size: 26px;
+          padding: 12px 22px 16px;
+          margin-right: 10px;
+          margin-bottom: 10px;
+
+          & i {
+            position: relative;
+            top: 4px;
+          }
+        }
+
+        @include mq('sm') {
+          flex-wrap: nowrap;
+          width: 90%;
+        }
+      }
+    }
+
+    & .row {
+      display: flex;
+      flex-wrap: wrap;
+
+      @include mq('sm') {
+        flex-grow: 1;
+      }
+    }
+
+    & .col {
+      width: 100%;
+      margin-bottom: 30px;
+
+      & h4 {
+        color: $white;
+        font-size: 1rem;
+        margin-bottom: 26px;
+      }
+
+      & li {
+        font-size: 0.8125rem;
+        line-height: 1.375rem;
+      }
+
+      & a:link,
+      & a:visited {
+        color: $white;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      @include mq('sm') {
+        width: 50%;
+      }
+
+      @include mq('md') {
+        width: 25%;
+      }
+    }
+  }
+}
+
+// Bottom footer
+
+.footer-bottom {
+  width: 100%;
+  background-color: $footer-dark;
+  font-size: 0.8125rem;
+  padding-top: 10px;
+
+  & .copy-info {
+    padding: 5px 0 10px;
+    color: $white;
+
+    & .xs {
+      display: none;
+    }
+
+    @include mq('sm') {
+      display: flex;
+      flex-direction: column;
+
+      & br {
+        display: none;
+      }
+
+      & .xs {
+        display: inline;
+      }
+    }
+  }
+
+  & a:link,
+  & a:visited {
+    color: $white;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
