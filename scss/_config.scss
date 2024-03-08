@@ -25,6 +25,9 @@ $black: #000;
 $accent: #ccc;
 $quote-author: #a3a8ac;
 
+$footer: #323544;
+$footer-dark: #212330;
+
 // Brand colors
 
 $brand-primary: #333645;
@@ -58,6 +61,15 @@ $cyber-color-hvr: #de093f;
 
 $developer-color: #ce4125;
 $developer-color-hvr: #bd3519;
+
+// Social colours for card map
+
+$social-colors: (
+  'facebook': #3b5998,
+  'linkedin': #0077b5,
+  'twitter': #00aced,
+  'instagram': #d93175,
+);
 
 // Card colors for card map
 
@@ -110,9 +122,23 @@ $card-colors: (
   }
 }
 
+// Socials colour loop
+
+@mixin socials($map) {
+
+  @each $social,
+  $social-color in $social-colors {
+
+    &-#{$social}:hover {
+      background-color: $social-color;
+    }
+  }
+}
+
 // Breakpoints
 
 $breakpoints: (
+  '2xs': 480px,
   'xs': 767px,
   'sm': 768px,
   'md': 992px,
