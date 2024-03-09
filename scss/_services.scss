@@ -108,7 +108,7 @@
   cursor: pointer;
   transition: .5s ease;
 
-  @include cards($card-colors);
+  @include services($service-colors);
 
   @include mq('xs') {
     flex: 1 1 100%;

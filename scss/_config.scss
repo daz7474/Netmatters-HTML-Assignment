@@ -60,7 +60,7 @@ $cyber-color: #f62459;
 $cyber-color-hvr: #de093f;
 
 $developer-color: #ce4125;
-$developer-color-hvr: #bd3519;
+$developer-color-hvr: #a3331d;
 
 // Social colours for card map
 
@@ -73,7 +73,7 @@ $social-colors: (
 
 // Card colors for card map
 
-$card-colors: (
+$service-colors: (
   'bespoke': #67809f,
   'IT': #4183d7,
   'digital': #2ecc71,
@@ -83,43 +83,45 @@ $card-colors: (
   'developer': #ce4125,
 );
 
-// Card each loop
+// Service each loop
 
-@mixin cards($map) {
+@mixin services($map) {
 
   @each $service,
-  $card-color in $card-colors {
+  $service-color in $service-colors {
     &-#{$service} {
-      .card-icon {
-        background-color: $card-color;
-        color: $white;
-      }
 
+      .card-icon,
       .btn-card {
+        background-color: $service-color;
         color: $white;
-        background-color: $card-color;
       }
 
       .service-nav-i {
-        color: $card-color;
+        display: block;
+        font-size: 1.438rem;
+        padding-bottom: 10px;
+        color: $service-color;
       }
 
+      .arrow-down {
+        border-color: $service-color transparent transparent transparent;
+      }
     }
 
     &-#{$service}:hover {
       color: $white;
-      background-color: $card-color;
-      border-color: $card-color;
+      background-color: $service-color;
+      border-color: $service-color;
       top: -10px;
-
 
       .card-icon {
         background-color: $white;
-        color: $card-color;
+        color: $service-color;
       }
 
       .btn-card {
-        color: $card-color;
+        color: $service-color;
         background-color: $white;
       }
 
