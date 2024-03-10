@@ -1,3 +1,290 @@
+@font-face {
+  font-family: "icomoon";
+  src: url("../fonts/icomoon.eot?i89e25");
+  src: url("../fonts/icomoon.eot?i89e25#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?i89e25") format("truetype"), url("../fonts/icomoon.woff?i89e25") format("woff"), url("../fonts/icomoon.svg?i89e25#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+[class^=icon-],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  font-style: normal;
+  font-weight: 400;
+  font-variant: normal;
+  text-transform: none;
+  font-size: 1.438rem;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-paperplane:before {
+  content: "\e91b";
+}
+
+.icon-bars:before {
+  content: "\e900";
+}
+
+.icon-transfer:before {
+  content: "\e901";
+}
+
+.icon-arrows:before {
+  content: "\e901";
+}
+
+.icon-locked:before {
+  content: "\e902";
+}
+
+.icon-encryption:before {
+  content: "\e902";
+}
+
+.icon-login:before {
+  content: "\e902";
+}
+
+.icon-log-in:before {
+  content: "\e902";
+}
+
+.icon-headphones:before {
+  content: "\e903";
+}
+
+.icon-music:before {
+  content: "\e903";
+}
+
+.icon-song:before {
+  content: "\e903";
+}
+
+.icon-sound:before {
+  content: "\e903";
+}
+
+.icon-listen:before {
+  content: "\e903";
+}
+
+.icon-earth:before {
+  content: "\e904";
+}
+
+.icon-globe:before {
+  content: "\e904";
+}
+
+.icon-folder-open:before {
+  content: "\e930";
+}
+
+.icon-ticket:before {
+  content: "\e939";
+}
+
+.icon-cart:before {
+  content: "\e93a";
+}
+
+.icon-phone:before {
+  content: "\e942";
+}
+
+.icon-display:before {
+  content: "\e956";
+}
+
+.icon-mobile:before {
+  content: "\e958";
+}
+
+.icon-drive:before {
+  content: "\e963";
+}
+
+.icon-meter:before {
+  content: "\e9a6";
+}
+
+.icon-lab:before {
+  content: "\e9aa";
+}
+
+.icon-cloud:before {
+  content: "\e9c1";
+}
+
+.icon-download3:before {
+  content: "\e9c7";
+}
+
+.icon-star-full:before {
+  content: "\e9d9";
+}
+
+.icon-arrow-right2:before {
+  content: "\ea3c";
+}
+
+.icon-embed2:before {
+  content: "\ea80";
+}
+
+.icon-facebook:before {
+  content: "\ea90";
+}
+
+.icon-instagram:before {
+  content: "\ea92";
+}
+
+.icon-twitter:before {
+  content: "\ea96";
+}
+
+.icon-linkedin2:before {
+  content: "\eaca";
+}
+
+.icon-shuffle:before {
+  content: "\e905";
+}
+
+.icon-mouse:before {
+  content: "\e91a";
+}
+
+.icon-school:before {
+  content: "\e907";
+}
+
+.icon-show_chart:before {
+  content: "\e908";
+}
+
+.icon-help:before {
+  content: "\e909";
+}
+
+.icon-desktop_mac:before {
+  content: "\e90a";
+}
+
+.icon-security:before {
+  content: "\e90b";
+}
+
+.icon-search:before {
+  content: "\e90c";
+}
+
+.icon-phone_in_talk:before {
+  content: "\e90d";
+}
+
+.icon-briefcase:before {
+  content: "\e906";
+}
+
+.icon-mouse:before {
+  content: "\e91a";
+}
+
+.icon-school:before {
+  content: "\e907";
+}
+
+.icon-show_chart:before {
+  content: "\e908";
+}
+
+.icon-help:before {
+  content: "\e909";
+}
+
+.icon-desktop_mac:before {
+  content: "\e90a";
+}
+
+.icon-security:before {
+  content: "\e90b";
+}
+
+.icon-search:before {
+  content: "\e90c";
+}
+
+.icon-phone_in_talk:before {
+  content: "\e90d";
+}
+
+.icon-clipboard:before {
+  content: "\e90e";
+}
+
+.icon-paste:before {
+  content: "\e90e";
+}
+
+.icon-clock-o:before {
+  content: "\e90f";
+}
+
+.icon-bullhorn:before {
+  content: "\e910";
+}
+
+.icon-handshake-o:before {
+  content: "\e911";
+}
+
+.icon-phone-square:before {
+  content: "\e912";
+}
+
+.icon-pencil:before {
+  content: "\e913";
+}
+
+.icon-envelope:before {
+  content: "\e914";
+}
+
+.icon-money:before {
+  content: "\e915";
+}
+
+.icon-laptop:before {
+  content: "\e916";
+}
+
+.icon-cloud-download:before {
+  content: "\e917";
+}
+
+.icon-group:before {
+  content: "\e918";
+}
+
+.icon-users:before {
+  content: "\e918";
+}
+
+.icon-cogs:before {
+  content: "\e919";
+}
+
+.icon-gears:before {
+  content: "\e919";
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -205,6 +492,9 @@ button {
 .card-bespoke .arrow-down {
   border-color: #67809f transparent transparent transparent;
 }
+.card-bespoke .icon-bespoke {
+  color: #67809f;
+}
 .card-bespoke:hover {
   color: #fff;
   background-color: #67809f;
@@ -219,7 +509,8 @@ button {
   color: #67809f;
   background-color: #fff;
 }
-.card-bespoke:hover .service-nav-i {
+.card-bespoke:hover .service-nav-i,
+.card-bespoke:hover .icon-bespoke {
   color: #fff;
 }
 .card-IT .card-icon,
@@ -236,6 +527,9 @@ button {
 .card-IT .arrow-down {
   border-color: #4183d7 transparent transparent transparent;
 }
+.card-IT .icon-IT {
+  color: #4183d7;
+}
 .card-IT:hover {
   color: #fff;
   background-color: #4183d7;
@@ -250,7 +544,8 @@ button {
   color: #4183d7;
   background-color: #fff;
 }
-.card-IT:hover .service-nav-i {
+.card-IT:hover .service-nav-i,
+.card-IT:hover .icon-IT {
   color: #fff;
 }
 .card-digital .card-icon,
@@ -267,6 +562,9 @@ button {
 .card-digital .arrow-down {
   border-color: #2ecc71 transparent transparent transparent;
 }
+.card-digital .icon-digital {
+  color: #2ecc71;
+}
 .card-digital:hover {
   color: #fff;
   background-color: #2ecc71;
@@ -281,7 +579,8 @@ button {
   color: #2ecc71;
   background-color: #fff;
 }
-.card-digital:hover .service-nav-i {
+.card-digital:hover .service-nav-i,
+.card-digital:hover .icon-digital {
   color: #fff;
 }
 .card-telecoms .card-icon,
@@ -298,6 +597,9 @@ button {
 .card-telecoms .arrow-down {
   border-color: #d64541 transparent transparent transparent;
 }
+.card-telecoms .icon-telecoms {
+  color: #d64541;
+}
 .card-telecoms:hover {
   color: #fff;
   background-color: #d64541;
@@ -312,7 +614,8 @@ button {
   color: #d64541;
   background-color: #fff;
 }
-.card-telecoms:hover .service-nav-i {
+.card-telecoms:hover .service-nav-i,
+.card-telecoms:hover .icon-telecoms {
   color: #fff;
 }
 .card-web .card-icon,
@@ -329,6 +632,9 @@ button {
 .card-web .arrow-down {
   border-color: #926fb1 transparent transparent transparent;
 }
+.card-web .icon-web {
+  color: #926fb1;
+}
 .card-web:hover {
   color: #fff;
   background-color: #926fb1;
@@ -343,7 +649,8 @@ button {
   color: #926fb1;
   background-color: #fff;
 }
-.card-web:hover .service-nav-i {
+.card-web:hover .service-nav-i,
+.card-web:hover .icon-web {
   color: #fff;
 }
 .card-cyber .card-icon,
@@ -360,6 +667,9 @@ button {
 .card-cyber .arrow-down {
   border-color: #f62459 transparent transparent transparent;
 }
+.card-cyber .icon-cyber {
+  color: #f62459;
+}
 .card-cyber:hover {
   color: #fff;
   background-color: #f62459;
@@ -374,7 +684,8 @@ button {
   color: #f62459;
   background-color: #fff;
 }
-.card-cyber:hover .service-nav-i {
+.card-cyber:hover .service-nav-i,
+.card-cyber:hover .icon-cyber {
   color: #fff;
 }
 .card-developer .card-icon,
@@ -391,6 +702,9 @@ button {
 .card-developer .arrow-down {
   border-color: #ce4125 transparent transparent transparent;
 }
+.card-developer .icon-developer {
+  color: #ce4125;
+}
 .card-developer:hover {
   color: #fff;
   background-color: #ce4125;
@@ -405,7 +719,8 @@ button {
   color: #ce4125;
   background-color: #fff;
 }
-.card-developer:hover .service-nav-i {
+.card-developer:hover .service-nav-i,
+.card-developer:hover .icon-developer {
   color: #fff;
 }
 @media (max-width: 767px) {
@@ -468,6 +783,9 @@ button {
   border: 0px solid transparent;
   border-radius: 50%;
   margin: 0 auto 17px;
+}
+.card-icon span {
+  font-size: 2rem;
 }
 
 .latest-news .section {
@@ -681,6 +999,11 @@ button {
   border-radius: 3px;
   cursor: pointer;
 }
+.btn span {
+  display: inline-block;
+  font-size: 20px;
+  margin-right: -4px;
+}
 .btn:hover {
   background-color: #121318;
 }
@@ -702,7 +1025,7 @@ button {
   .btn-support:hover {
     background-color: #2a6ec6;
   }
-  .btn-support > i {
+  .btn-support > span {
     margin-right: 10px;
   }
 }
@@ -720,7 +1043,7 @@ button {
   .btn-contact:hover {
     background-color: #74747a;
   }
-  .btn-contact > i {
+  .btn-contact > span {
     margin-right: 10px;
   }
 }
@@ -825,9 +1148,6 @@ button {
   display: flex;
   justify-content: space-between;
 }
-.nav-row i {
-  font-size: 26px;
-}
 
 .header-logo {
   align-self: center;
@@ -873,15 +1193,15 @@ button {
   outline: none;
   background-color: #999aa2;
   border-radius: 0 3px 3px 0;
-  padding: 7px 20px 3px;
+  padding: 7px 15px 3px;
   height: 56px;
   cursor: pointer;
 }
 .main-nav .search-form--btn:hover {
   background-color: #74747a;
 }
-.main-nav .search-form i {
-  font-size: 24px;
+.main-nav .search-form span {
+  font-size: 32px;
   color: #fff;
 }
 @media (max-width: 767px) {
@@ -965,11 +1285,11 @@ button {
   background: none;
   border: none;
   position: absolute;
-  top: 15px;
+  top: 12px;
   right: 10px;
 }
-.search-form-mobile i {
-  font-size: 20px;
+.search-form-mobile span {
+  font-size: 28px;
 }
 @media (min-width: 768px) {
   .search-form-mobile {
@@ -1081,7 +1401,7 @@ button {
 .main-navigation .nav-box .secondary-nav-container .inner-container .list-item a:hover {
   text-decoration: underline;
 }
-.main-navigation .nav-box .secondary-nav-container .inner-container .list-item a i {
+.main-navigation .nav-box .secondary-nav-container .inner-container .list-item a span {
   margin-right: 10px;
 }
 @media (min-width: 1260px) {
@@ -1103,6 +1423,10 @@ button {
   text-decoration: none;
   line-height: 1;
   padding: 19px 0 18px;
+}
+.main-navigation .nav-box .item a [class^=icon-] {
+  display: block;
+  padding-bottom: 10px;
 }
 .main-navigation .nav-box .item a small {
   display: block;
@@ -1228,10 +1552,6 @@ button {
   font-weight: 600;
   margin: 0 0 1.25rem;
 }
-.banner .item-content i {
-  margin-right: -4px;
-  margin-left: 13px;
-}
 @media (min-width: 992px) {
   .banner .item-content {
     text-align: left;
@@ -1273,6 +1593,9 @@ button {
   background-color: #333645;
   color: #fff;
 }
+.brand-background .section {
+  padding-top: 0px;
+}
 
 .welcome-container h2 {
   font-size: 2.25rem;
@@ -1299,8 +1622,10 @@ button {
 }
 .welcome-container .star-container {
   color: #ffa500;
-  font-size: 38px;
   margin-bottom: 25px;
+}
+.welcome-container .star-container span {
+  font-size: 50px;
 }
 .welcome-container .quote {
   font-weight: 600;
@@ -1459,7 +1784,7 @@ footer .footer-row .company-info .company-socials a {
   margin-right: 10px;
   margin-bottom: 10px;
 }
-footer .footer-row .company-info .company-socials a i {
+footer .footer-row .company-info .company-socials a span {
   position: relative;
   top: 4px;
 }

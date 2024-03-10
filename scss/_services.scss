@@ -183,4 +183,8 @@
   border: 0px solid transparent;
   border-radius: 50%;
   margin: 0 auto 17px;
+
+  & span {
+    font-size: 2rem;
+  }
 }

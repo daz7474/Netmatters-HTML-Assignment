@@ -14,6 +14,12 @@
   border-radius: 3px;
   cursor: pointer;
 
+  & span {
+    display: inline-block;
+    font-size: 20px;
+    margin-right: -4px;
+  }
+
   &:hover {
     background-color: $light-black-hvr;
   }
@@ -37,7 +43,7 @@
         background-color: $IT-color-hvr;
       }
 
-      &>i {
+      &>span {
         margin-right: 10px;
       }
     }
@@ -57,7 +63,7 @@
         background-color: $search-color-hvr;
       }
 
-      &>i {
+      &>span {
         margin-right: 10px;
       }
     }

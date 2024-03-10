@@ -107,6 +107,10 @@ $service-colors: (
       .arrow-down {
         border-color: $service-color transparent transparent transparent;
       }
+
+      .icon-#{$service} {
+        color: $service-color;
+      }
     }
 
     &-#{$service}:hover {
@@ -125,7 +129,8 @@ $service-colors: (
         background-color: $white;
       }
 
-      .service-nav-i {
+      .service-nav-i,
+      .icon-#{$service} {
         color: $white;
       }
     }
