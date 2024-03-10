@@ -766,48 +766,28 @@ button {
 .btn-developer:hover {
   background-color: #a3331d;
 }
-.btn-brand {
+.btn-brand, .btn-google, .btn-trustpilot {
   font-size: 20px;
   border-radius: 6px;
-  padding: 10px 30px;
-  margin-bottom: 17px;
+  padding: 10px 20px;
+  margin-top: 20px;
+  margin-right: 8px;
 }
-.btn-brand:hover {
+.btn-brand:hover, .btn-google:hover, .btn-trustpilot:hover {
   background-color: #121318;
-}
-@media (min-width: 1260px) {
-  .btn-brand {
-    margin-top: auto;
-  }
 }
 .btn-google {
   background-color: #4387f6;
-  border-radius: 6px;
-  padding: 10px 30px;
-  margin-top: 20px;
-  margin-right: 8px;
 }
 .btn-google:hover {
   background-color: #166af4;
 }
-@media (min-width: 1260px) {
-  .btn-google {
-    margin-top: auto;
-  }
-}
 .btn-trustpilot {
   background-color: #00b67b;
-  border-radius: 6px;
-  padding: 10px 30px;
-  margin-top: 20px;
+  margin-right: 0;
 }
 .btn-trustpilot:hover {
   background-color: #009b69;
-}
-@media (min-width: 1260px) {
-  .btn-trustpilot {
-    margin-top: auto;
-  }
 }
 .btn-facebook:hover {
   background-color: #3b5998;
@@ -1298,6 +1278,14 @@ button {
   font-size: 2.25rem;
   margin-top: -6px;
   margin-bottom: 40px;
+}
+.welcome-container .col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.welcome-container .col h2 {
+  margin-top: 50px;
 }
 .welcome-container p {
   line-height: 1.875rem;

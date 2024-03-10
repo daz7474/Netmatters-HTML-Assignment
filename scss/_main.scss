@@ -187,6 +187,16 @@
     margin-bottom: 40px;
   }
 
+  & .col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    & h2 {
+      margin-top: 50px;
+    }
+  }
+
   & p {
     line-height: 1.875rem;
     margin-bottom: 25px;

@@ -121,49 +121,36 @@
     }
   }
 
-  &-brand {
+  // Brand color
+
+  &-brand,
+  &-google,
+  &-trustpilot {
     font-size: 20px;
     border-radius: 6px;
-    padding: 10px 30px;
-    margin-bottom: 17px;
+    padding: 10px 20px;
+    margin-top: 20px;
+    margin-right: 8px;
 
     &:hover {
       background-color: $light-black-hvr;
-    }
-
-    @include mq('lg') {
-      margin-top: auto;
     }
   }
 
   &-google {
     background-color: $brand-google;
-    border-radius: 6px;
-    padding: 10px 30px;
-    margin-top: 20px;
-    margin-right: 8px;
 
     &:hover {
       background-color: $brand-google-hvr;
-    }
-
-    @include mq('lg') {
-      margin-top: auto;
     }
   }
 
   &-trustpilot {
     background-color: $brand-trustpilot;
-    border-radius: 6px;
-    padding: 10px 30px;
-    margin-top: 20px;
+    margin-right: 0;
 
     &:hover {
       background-color: $brand-trustpilot-hvr;
-    }
-
-    @include mq('lg') {
-      margin-top: auto;
     }
   }
 
