@@ -1386,23 +1386,25 @@ button {
   margin-bottom: 10px;
 }
 .main-navigation .nav-box .secondary-nav-container .inner-container .list-item {
-  width: 33%;
-  text-align: left;
-  margin-top: 15px;
-}
-.main-navigation .nav-box .secondary-nav-container .inner-container .list-item a {
   display: flex;
   align-items: center;
+  width: 33%;
   color: #fff;
   font-size: 1.2rem;
   line-height: 1.3rem;
+  text-align: left;
   padding: 10px 0;
+  margin-top: 15px;
+}
+.main-navigation .nav-box .secondary-nav-container .inner-container .list-item span {
+  display: inline-block;
+  margin-right: 10px;
+}
+.main-navigation .nav-box .secondary-nav-container .inner-container .list-item a {
+  color: #fff;
 }
 .main-navigation .nav-box .secondary-nav-container .inner-container .list-item a:hover {
   text-decoration: underline;
-}
-.main-navigation .nav-box .secondary-nav-container .inner-container .list-item a span {
-  margin-right: 10px;
 }
 @media (min-width: 1260px) {
   .main-navigation .nav-box .secondary-nav-container .inner-container {

@@ -310,24 +310,26 @@
         }
 
         & .list-item {
+          display: flex;
+          align-items: center;
           width: 33%;
+          color: $white;
+          font-size: 1.2rem;
+          line-height: 1.3rem;
           text-align: left;
+          padding: 10px 0;
           margin-top: 15px;
 
+          & span {
+            display: inline-block;
+            margin-right: 10px;
+          }
+
           & a {
-            display: flex;
-            align-items: center;
             color: $white;
-            font-size: 1.2rem;
-            line-height: 1.3rem;
-            padding: 10px 0;
 
             &:hover {
               text-decoration: underline;
-            }
-
-            & span {
-              margin-right: 10px;
             }
           }
         }
