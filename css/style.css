@@ -1,7 +1,7 @@
 @font-face {
   font-family: "icomoon";
-  src: url("../fonts/icomoon.eot?i89e25");
-  src: url("../fonts/icomoon.eot?i89e25#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?i89e25") format("truetype"), url("../fonts/icomoon.woff?i89e25") format("woff"), url("../fonts/icomoon.svg?i89e25#icomoon") format("svg");
+  src: url("../fonts/icomoon.eot?68n2fz");
+  src: url("../fonts/icomoon.eot?68n2fz#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?68n2fz") format("truetype"), url("../fonts/icomoon.woff?68n2fz") format("woff"), url("../fonts/icomoon.svg?68n2fz#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -14,7 +14,7 @@
   font-weight: 400;
   font-variant: normal;
   text-transform: none;
-  font-size: 1.438rem;
+  font-size: 23px;
   line-height: 1;
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
@@ -157,40 +157,12 @@
   content: "\e905";
 }
 
-.icon-mouse:before {
-  content: "\e91a";
-}
-
-.icon-school:before {
-  content: "\e907";
-}
-
-.icon-show_chart:before {
-  content: "\e908";
-}
-
-.icon-help:before {
-  content: "\e909";
-}
-
-.icon-desktop_mac:before {
-  content: "\e90a";
-}
-
-.icon-security:before {
-  content: "\e90b";
-}
-
-.icon-search:before {
-  content: "\e90c";
-}
-
-.icon-phone_in_talk:before {
-  content: "\e90d";
-}
-
 .icon-briefcase:before {
   content: "\e906";
+}
+
+.icon-chat:before {
+  content: "\e91c";
 }
 
 .icon-mouse:before {
@@ -293,7 +265,7 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  font-size: 1rem;
+  font-size: 16px;
   letter-spacing: 0.4px;
   color: #454555;
   overflow-x: hidden;
@@ -305,14 +277,14 @@ body {
 
 .h1,
 h1 {
-  font-size: 2.25rem;
+  font-size: 36px;
   font-weight: 400;
   margin: 0 0 28px;
 }
 
 .h2,
 h2 {
-  font-size: 2rem;
+  font-size: 32px;
 }
 
 .h2,
@@ -329,21 +301,21 @@ h4 {
 .h4,
 h3,
 h4 {
-  font-size: 1.25rem;
+  font-size: 20px;
 }
 
 .h3,
 h3 {
-  font-size: 1.625rem;
+  font-size: 26px;
 }
 
 .h4,
 h4 {
-  font-size: 1rem;
+  font-size: 16px;
 }
 
 p {
-  line-height: 1.875rem;
+  line-height: 30px;
   margin-bottom: 25px;
 }
 
@@ -373,13 +345,13 @@ button {
 }
 
 .services-heading {
-  font-size: 1.85rem;
+  font-size: 29.5px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 .services-heading h2 {
-  font-size: 2.7rem;
+  font-size: 43px;
   margin-bottom: -10px;
   margin-top: -13px;
 }
@@ -398,7 +370,7 @@ button {
 @media (min-width: 768px) {
   .services-heading h3 {
     display: block;
-    font-size: 1.625rem;
+    font-size: 26px;
   }
 }
 .services-heading-bottom {
@@ -485,7 +457,7 @@ button {
 }
 .card-bespoke .service-nav-i {
   display: block;
-  font-size: 1.438rem;
+  font-size: 23px;
   padding-bottom: 10px;
   color: #67809f;
 }
@@ -520,7 +492,7 @@ button {
 }
 .card-IT .service-nav-i {
   display: block;
-  font-size: 1.438rem;
+  font-size: 23px;
   padding-bottom: 10px;
   color: #4183d7;
 }
@@ -555,7 +527,7 @@ button {
 }
 .card-digital .service-nav-i {
   display: block;
-  font-size: 1.438rem;
+  font-size: 23px;
   padding-bottom: 10px;
   color: #2ecc71;
 }
@@ -590,7 +562,7 @@ button {
 }
 .card-telecoms .service-nav-i {
   display: block;
-  font-size: 1.438rem;
+  font-size: 23px;
   padding-bottom: 10px;
   color: #d64541;
 }
@@ -625,7 +597,7 @@ button {
 }
 .card-web .service-nav-i {
   display: block;
-  font-size: 1.438rem;
+  font-size: 23px;
   padding-bottom: 10px;
   color: #926fb1;
 }
@@ -660,7 +632,7 @@ button {
 }
 .card-cyber .service-nav-i {
   display: block;
-  font-size: 1.438rem;
+  font-size: 23px;
   padding-bottom: 10px;
   color: #f62459;
 }
@@ -695,7 +667,7 @@ button {
 }
 .card-developer .service-nav-i {
   display: block;
-  font-size: 1.438rem;
+  font-size: 23px;
   padding-bottom: 10px;
   color: #ce4125;
 }
@@ -785,7 +757,7 @@ button {
   margin: 0 auto 17px;
 }
 .card-icon span {
-  font-size: 2rem;
+  font-size: 32px;
 }
 
 .latest-news .section {
@@ -803,7 +775,7 @@ button {
 .latest-news .col .item {
   position: relative;
   top: 0;
-  font-size: 0.8125rem;
+  font-size: 13px;
   margin-top: 30px;
 }
 .latest-news .col .item-link {
@@ -828,9 +800,9 @@ button {
   top: 10px;
   color: #fff;
   text-transform: uppercase;
-  font-size: 0.75rem;
+  font-size: 12px;
   font-weight: 600;
-  line-height: 1.428rem;
+  line-height: 23px;
   padding: 0 10px;
 }
 .latest-news .col .news-tag-1 {
@@ -860,13 +832,13 @@ button {
   color: #ce4125;
 }
 .latest-news .col .content h3 {
-  font-size: 1rem;
-  line-height: 1.5rem;
+  font-size: 16px;
+  line-height: 24px;
   margin-bottom: 15px;
 }
 .latest-news .col .content p {
-  line-height: 1.375rem;
-  font-size: 0.8125rem;
+  line-height: 22px;
+  font-size: 13px;
   margin-bottom: 25px;
 }
 .latest-news .col .content .user {
@@ -881,12 +853,12 @@ button {
 }
 .latest-news .col .content .user .details {
   padding-left: 20px;
-  line-height: 1.375rem;
+  line-height: 22px;
 }
 .latest-news .col .content .read-time {
   display: inline;
   text-transform: uppercase;
-  font-size: 0.85rem;
+  font-size: 13.5px;
   color: rgba(51, 54, 69, 0.5);
   vertical-align: middle;
 }
@@ -927,7 +899,7 @@ button {
 }
 
 .news-heading {
-  font-size: 1.85rem;
+  font-size: 29.5px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -935,7 +907,7 @@ button {
   margin-bottom: -10px;
 }
 .news-heading h2 {
-  font-size: 2.25rem;
+  font-size: 36px;
   font-weight: 600;
 }
 .news-heading a {
@@ -947,7 +919,7 @@ button {
 @media (min-width: 768px) {
   .news-heading a h3 {
     display: block;
-    font-size: 1.625rem;
+    font-size: 26px;
     font-weight: 600;
     margin-bottom: 28px;
   }
@@ -987,7 +959,7 @@ button {
 
 .btn {
   display: inline-block;
-  font-size: 1.063rem;
+  font-size: 17px;
   color: #fff;
   text-align: center;
   text-transform: uppercase;
@@ -1008,7 +980,7 @@ button {
   background-color: #121318;
 }
 .btn-lg {
-  font-size: 1.25rem;
+  font-size: 20px;
   line-height: 50px;
   padding: 5px 20px;
 }
@@ -1111,6 +1083,42 @@ button {
 }
 .btn-trustpilot:hover {
   background-color: #009b69;
+}
+.btn-cookie {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background-color: #75788a;
+  border: solid #75788a;
+  border-width: 1px 1px 0 0;
+  border-radius: 0;
+  border-top-right-radius: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 22px;
+  text-transform: capitalize;
+  padding: 0 10px;
+  z-index: 99;
+}
+.btn-cookie:hover {
+  background-color: #999aa2;
+}
+.btn-chat {
+  position: fixed;
+  right: 10px;
+  bottom: 20px;
+  background-color: #333645;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+  z-index: 99;
+}
+.btn-chat span {
+  position: absolute;
+  top: 13px;
+  left: 13px;
+  font-size: 32px;
 }
 .btn-facebook:hover {
   background-color: #3b5998;
@@ -1390,8 +1398,8 @@ button {
   align-items: center;
   width: 33%;
   color: #fff;
-  font-size: 1.2rem;
-  line-height: 1.3rem;
+  font-size: 19px;
+  line-height: 21px;
   text-align: left;
   padding: 10px 0;
   margin-top: 15px;
@@ -1420,7 +1428,7 @@ button {
   display: block;
   position: relative;
   color: #fff;
-  font-size: 1.125rem;
+  font-size: 18px;
   text-transform: uppercase;
   text-decoration: none;
   line-height: 1;
@@ -1432,7 +1440,7 @@ button {
 }
 .main-navigation .nav-box .item a small {
   display: block;
-  font-size: 0.625rem;
+  font-size: 10px;
   padding-bottom: 1px;
 }
 @media (min-width: 1260px) {
@@ -1479,14 +1487,14 @@ button {
 }
 
 .h2 {
-  font-size: 1.3rem;
+  font-size: 21px;
   padding-bottom: 10px;
   margin: 0 0 11px;
 }
 
 .p {
-  font-size: 0.8125rem;
-  line-height: 1.375rem;
+  font-size: 13px;
+  line-height: 22px;
   margin-bottom: 13px;
   font-weight: 400;
 }
@@ -1539,32 +1547,32 @@ button {
   position: relative;
   color: #fff;
   text-align: center;
-  padding: 3.75rem 0;
+  padding: 60px 0;
   z-index: 4;
 }
 .banner .item-content h1 {
-  font-size: 2.5rem;
-  line-height: 3rem;
+  font-size: 40px;
+  line-height: 48px;
   font-weight: 600;
-  margin: 0 0 1.25rem;
+  margin: 0 0 20px;
 }
 .banner .item-content p {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
+  font-size: 20px;
+  line-height: 28px;
   font-weight: 600;
-  margin: 0 0 1.25rem;
+  margin: 0 0 20px;
 }
 @media (min-width: 992px) {
   .banner .item-content {
     text-align: left;
   }
   .banner .item-content h1 {
-    font-size: 4rem;
-    line-height: 5rem;
+    font-size: 64px;
+    line-height: 80px;
   }
   .banner .item-content p {
-    font-size: 1.625rem;
-    line-height: 2.5rem;
+    font-size: 26px;
+    line-height: 40px;
   }
 }
 
@@ -1600,7 +1608,7 @@ button {
 }
 
 .welcome-container h2 {
-  font-size: 2.25rem;
+  font-size: 36px;
   margin-top: -6px;
   margin-bottom: 40px;
 }
@@ -1613,7 +1621,7 @@ button {
   margin-top: 50px;
 }
 .welcome-container p {
-  line-height: 1.875rem;
+  line-height: 30px;
   margin-bottom: 25px;
 }
 .welcome-container p a:link, .welcome-container p a:visited {
@@ -1631,11 +1639,11 @@ button {
 }
 .welcome-container .quote {
   font-weight: 600;
-  font-size: 1.3rem;
+  font-size: 21px;
   font-style: italic;
 }
 .welcome-container .quote-author {
-  font-size: 1.1rem;
+  font-size: 17.5px;
   color: #a3a8ac;
 }
 .welcome-container .quote-author a:link, .welcome-container .quote-author a:visited {
@@ -1657,7 +1665,7 @@ button {
   padding: 50px 0;
 }
 .newsletter h2 {
-  font-size: 2rem;
+  font-size: 32px;
   font-weight: 400;
   margin-bottom: 15px;
 }
@@ -1811,13 +1819,13 @@ footer .footer-row .col {
 }
 footer .footer-row .col h4 {
   color: #fff;
-  font-size: 0.98rem;
+  font-size: 15.5px;
   text-transform: uppercase;
   margin-bottom: 26px;
 }
 footer .footer-row .col li {
-  font-size: 0.85rem;
-  line-height: 1.375rem;
+  font-size: 13.5px;
+  line-height: 22px;
 }
 footer .footer-row .col a:link, footer .footer-row .col a:visited {
   color: #fff;
@@ -1839,7 +1847,7 @@ footer .footer-row .col a:link:hover, footer .footer-row .col a:visited:hover {
 .footer-bottom {
   width: 100%;
   background-color: #212330;
-  font-size: 0.8125rem;
+  font-size: 13px;
   padding-top: 10px;
 }
 .footer-bottom .copy-info {

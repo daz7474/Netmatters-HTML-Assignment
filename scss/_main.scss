@@ -41,14 +41,14 @@
 // Headings
 
 .h2 {
-  font-size: 1.3rem;
+  font-size: 21px;
   padding-bottom: 10px;
   margin: 0 0 11px
 }
 
 .p {
-  font-size: .8125rem;
-  line-height: 1.375rem;
+  font-size: 13px;
+  line-height: 22px;
   margin-bottom: 13px;
   font-weight: 400;
 }
@@ -105,34 +105,34 @@
       position: relative;
       color: $white;
       text-align: center;
-      padding: 3.75rem 0;
+      padding: 60px 0;
       z-index: 4;
 
       & h1 {
-        font-size: 2.5rem;
-        line-height: 3rem;
+        font-size: 40px;
+        line-height: 48px;
         font-weight: 600;
-        margin: 0 0 1.25rem;
+        margin: 0 0 20px;
       }
 
       & p {
-        font-size: 1.25rem;
-        line-height: 1.75rem;
+        font-size: 20px;
+        line-height: 28px;
         font-weight: 600;
-        margin: 0 0 1.25rem;
+        margin: 0 0 20px;
       }
 
       @include mq('md') {
         text-align: left;
 
         & h1 {
-          font-size: 4rem;
-          line-height: 5rem;
+          font-size: 64px;
+          line-height: 80px;
         }
 
         & p {
-          font-size: 1.625rem;
-          line-height: 2.5rem;
+          font-size: 26px;
+          line-height: 40px;
         }
       }
     }
@@ -181,7 +181,7 @@
 
 .welcome-container {
   & h2 {
-    font-size: 2.25rem;
+    font-size: 36px;
     margin-top: -6px;
     margin-bottom: 40px;
   }
@@ -197,7 +197,7 @@
   }
 
   & p {
-    line-height: 1.875rem;
+    line-height: 30px;
     margin-bottom: 25px;
 
     & a:link,
@@ -221,11 +221,11 @@
 
   .quote {
     font-weight: 600;
-    font-size: 1.3rem;
+    font-size: 21px;
     font-style: italic;
 
     &-author {
-      font-size: 1.1rem;
+      font-size: 17.5px;
       color: $quote-author;
     }
 
@@ -254,7 +254,7 @@
   }
 
   & h2 {
-    font-size: 2rem;
+    font-size: 32px;
     font-weight: 400;
     margin-bottom: 15px;
   }
