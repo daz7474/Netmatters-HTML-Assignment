@@ -1361,7 +1361,7 @@ button {
   border-width: 30px 66.5px 0 66.5px;
   transform: rotate(0deg);
   bottom: -29px;
-  margin-top: -10px;
+  margin-top: -15px;
   z-index: 6;
 }
 @media (min-width: 1260px) {
@@ -1651,12 +1651,12 @@ button {
 .carousel-container .item-container .item .description .box .arrow {
   position: absolute;
   left: 50%;
-  bottom: 20px;
+  bottom: 12px;
   margin-left: -36px;
 }
 .carousel-container .item-container .item .description .box .arrow::after {
   content: "";
-  margin: auto;
+  margin-top: 5px;
   display: inline-block;
   border-color: #333645 transparent transparent;
   border-style: solid;
