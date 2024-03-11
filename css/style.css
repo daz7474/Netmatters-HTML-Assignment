@@ -1079,7 +1079,7 @@ button {
 }
 .btn-trustpilot {
   background-color: #00b67b;
-  margin-right: 0;
+  margin-right: -31px;
 }
 .btn-trustpilot:hover {
   background-color: #009b69;
