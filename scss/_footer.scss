@@ -21,7 +21,11 @@ footer {
       width: 400px;
 
       & img {
-        width: 320px;
+        width: 250px;
+
+        @include mq('sm') {
+          width: 320px;
+        }
       }
 
       & h4 {

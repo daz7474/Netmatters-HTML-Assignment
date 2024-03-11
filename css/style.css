@@ -1769,7 +1769,12 @@ footer .footer-row .company-info {
   }
 }
 footer .footer-row .company-info img {
-  width: 320px;
+  width: 250px;
+}
+@media (min-width: 768px) {
+  footer .footer-row .company-info img {
+    width: 320px;
+  }
 }
 footer .footer-row .company-info h4 {
   color: #fff;
