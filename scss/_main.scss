@@ -144,7 +144,7 @@
 .carousel-container {
   display: flex;
   justify-content: center;
-  overflow-x: hidden;
+  overflow-x: clip;
 
   .item-container {
     margin-right: 50px;

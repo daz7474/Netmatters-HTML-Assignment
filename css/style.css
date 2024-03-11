@@ -1579,7 +1579,7 @@ button {
 .carousel-container {
   display: flex;
   justify-content: center;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 .carousel-container .item-container {
   margin-right: 50px;
