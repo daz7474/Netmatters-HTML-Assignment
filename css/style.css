@@ -1587,6 +1587,7 @@ button {
 }
 .carousel-container .item-container .item {
   display: flex;
+  position: relative;
   align-items: center;
   width: auto;
   height: 70px;
@@ -1596,9 +1597,73 @@ button {
 .carousel-container .item-container .item img {
   filter: grayscale(1);
   max-width: 200px;
+  max-height: 70px;
 }
 .carousel-container .item-container .item img:hover {
   filter: grayscale(0);
+}
+.carousel-container .item-container .item .description {
+  display: none;
+  position: absolute;
+  text-align: center;
+  left: -200px;
+  right: -200px;
+  bottom: 100%;
+  z-index: 5;
+}
+.carousel-container .item-container .item .description .box {
+  background-color: #333645;
+  color: #fff;
+  font-size: 14px;
+  max-width: 280px;
+  padding: 20px;
+  margin: 0 auto 50px;
+}
+.carousel-container .item-container .item .description .box h3 {
+  font-size: 18px;
+  color: #fff;
+  margin: 0;
+}
+.carousel-container .item-container .item .description .box p {
+  font-size: 13px;
+  line-height: 22px;
+  margin-top: 17px;
+  margin-bottom: 0;
+}
+.carousel-container .item-container .item .description .box .btn {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  padding-right: 5px;
+  margin-top: 11px;
+}
+.carousel-container .item-container .item .description .box .btn span {
+  font-size: 16px;
+  margin-left: 5px;
+}
+.carousel-container .item-container .item .description .box .text-link {
+  color: #fff;
+  font-weight: 600;
+}
+.carousel-container .item-container .item .description .box .text-link:hover {
+  text-decoration: underline;
+}
+.carousel-container .item-container .item .description .box .arrow {
+  position: absolute;
+  left: 50%;
+  bottom: 12px;
+  margin-left: -36px;
+}
+.carousel-container .item-container .item .description .box .arrow::after {
+  content: "";
+  margin: auto;
+  display: inline-block;
+  border-color: #333645 transparent transparent;
+  border-style: solid;
+  border-width: 35px 36px 0;
+}
+.carousel-container .item-container .item:hover .description {
+  display: block;
 }
 
 .brand-background {
