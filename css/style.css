@@ -1651,7 +1651,7 @@ button {
 .carousel-container .item-container .item .description .box .arrow {
   position: absolute;
   left: 50%;
-  bottom: 15px;
+  bottom: 20px;
   margin-left: -36px;
 }
 .carousel-container .item-container .item .description .box .arrow::after {
