@@ -1579,6 +1579,7 @@ button {
 .carousel-container {
   display: flex;
   justify-content: center;
+  overflow-x: hidden;
 }
 .carousel-container .item-container {
   margin-right: 50px;
