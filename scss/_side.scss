@@ -48,8 +48,10 @@
         display: block;
         color: $white;
         padding: 20px;
+      }
 
-        &:hover {
+      &:hover {
+        .heading {
           background-color: #3d404e;
         }
       }
@@ -149,12 +151,25 @@
 }
 
 // Pushes body left
-.side-menu-margins {
+
+.body-adjusted {
   margin-right: 275px;
   margin-left: -275px;
+  overflow-y: hidden;
 
   @include mq('md') {
     margin-right: 350px;
     margin-left: -350px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .4);
+    z-index: 99;
   }
 }
