@@ -13,7 +13,7 @@ const body = document.querySelector("body");
 menuBtn.addEventListener("click", () => {
   sideMenu.classList.toggle("side-menu-open");
   // Toggles margins on the body when menu is open
-  body.classList.toggle("side-menu-margins");
+  body.classList.toggle("body-adjusted");
   // Toggles the class "x" to add/remove a cross
   burgerBars.forEach(bar => bar.classList.toggle('x'));
 });
