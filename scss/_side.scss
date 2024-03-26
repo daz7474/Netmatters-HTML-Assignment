@@ -1,0 +1,160 @@
+// ==========================================================================
+// Side menu
+// ==========================================================================
+
+.side-menu {
+  display: hidden;
+  position: fixed;
+  top: 0;
+  right: -350px;
+  background-color: #333645;
+  width: 275px;
+  height: 100vh;
+  overflow-x: hidden;
+  z-index: 1003;
+
+  @include mq('md') {
+    width: 350px;
+  }
+
+  & .side-sub-menu {
+    display: flex;
+    flex-direction: column;
+
+    & .service-sub {
+      display: none;
+
+      @include mq('md') {
+        display: block;
+      }
+    }
+
+    & .support {
+      display: block;
+
+      @include mq('md') {
+        display: none;
+      }
+    }
+
+    & .list-item {
+      color: $white;
+      font-size: 16px;
+      text-transform: uppercase;
+      border-top: 1px solid hsla(0, 0%, 100%, .1);
+      border-bottom: 1px solid rgba(0, 0, 0, .25);
+
+      & .heading {
+        display: block;
+        color: $white;
+        padding: 20px;
+
+        &:hover {
+          background-color: #3d404e;
+        }
+      }
+    }
+
+    & .sub-menu-service ul li {
+      font-size: 14px;
+      padding: 15px 20px;
+    }
+
+    & .icon-double_arrow {
+      font-size: 10px;
+      padding-right: 15px;
+    }
+  }
+
+  & .side-mobile-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+
+    & div ul li {
+      padding: 10px;
+    }
+
+    @include mq('md') {
+      display: none;
+    }
+  }
+
+  & .nav-box {
+    width: 100%;
+  }
+
+  & .item {
+    padding-top: 20px;
+
+    & a {
+      border: 1px solid hsla(0, 0%, 100%, .1);
+      border-radius: 3px;
+
+      & .icon-bespoke {
+        color: $bespoke-color;
+      }
+
+      & .icon-IT {
+        color: $IT-color;
+      }
+
+      & .icon-digital {
+        color: $digital-color;
+      }
+
+      & .icon-telecoms {
+        color: $telecoms-color;
+      }
+
+      & .icon-web {
+        color: $web-color;
+      }
+
+      & .icon-cyber {
+        color: $cyber-color;
+      }
+
+      & .icon-developer {
+        color: $developer-color;
+      }
+
+      &:hover {
+        background-color: #3d404e;
+      }
+    }
+  }
+
+  & .sub-item {
+    margin-top: 20px;
+  }
+
+  & div ul li {
+    background-color: $light-black;
+    border-top: 1px solid rgba(0, 0, 0, .45);
+    text-transform: uppercase;
+    padding: 15px 20px;
+
+    & a {
+      color: $white;
+    }
+  }
+}
+
+// Opens side menu
+.side-menu-open {
+  display: block;
+  right: 0;
+}
+
+// Pushes body left
+.side-menu-margins {
+  margin-right: 275px;
+  margin-left: -275px;
+
+  @include mq('md') {
+    margin-right: 350px;
+    margin-left: -350px;
+  }
+}
