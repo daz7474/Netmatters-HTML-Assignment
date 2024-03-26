@@ -58,6 +58,7 @@
 .banner {
   position: relative;
   width: 100%;
+  overflow-x: hidden;
 
   .item {
     display: flex;
@@ -139,14 +140,39 @@
   }
 }
 
+.slick-dots {
+  bottom: 25px;
+}
+
+.slick-dots li button:before {
+  font-size: 14px;
+  color: $light-grey;
+}
+
+.slick-dots li.slick-active button:before {
+  color: $white;
+  border: 2px solid $white;
+  border-radius: 50%;
+  width: 19px;
+  height: 19px;
+  top: -2px;
+  left: -2px;
+  opacity: 1;
+}
+
 // Carousel section
 
-.carousel-container {
+.slick-list {
+  overflow: inherit;
+}
+
+.clients-container {
   display: flex;
-  justify-content: center;
   overflow-x: clip;
+  z-index: 5;
 
   .item-container {
+    width: auto;
     margin-right: 50px;
 
     & .item {
@@ -171,7 +197,6 @@
       // Client popup
 
       .description {
-
         display: none;
         position: absolute;
         text-align: center;
@@ -439,4 +464,67 @@
       }
     }
   }
+}
+
+// Cookies
+
+.cookie-consent {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, .7);
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  & .cookie-box {
+    position: relative;
+    background-color: $white;
+    border-radius: 5px;
+    width: 90%;
+    margin: auto;
+
+    & .cookie-title,
+    & .cookie-content {
+      border-bottom: 1px solid #e5e5e5;
+      padding: 20px;
+    }
+
+    & .cookie-btns {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      padding: 20px;
+
+      & .col:first-child {
+        margin-bottom: 30px;
+
+        @include mq('sm') {
+          margin-bottom: 0;
+        }
+      }
+
+      @include mq('sm') {
+        flex-direction: row;
+        justify-content: space-around;
+      }
+    }
+
+    & .link {
+      color: $brand-primary;
+    }
+
+    @include mq('sm') {
+      width: 600px;
+    }
+  }
+}
+
+.cookie-show {
+  display: flex;
 }
