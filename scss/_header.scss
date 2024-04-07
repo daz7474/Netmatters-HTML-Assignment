@@ -163,6 +163,7 @@
     height: 33px;
 
     & .bar {
+      display: block;
       width: 100%;
       height: 5px;
       background-color: $white;

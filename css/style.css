@@ -1296,6 +1296,7 @@ button {
   height: 33px;
 }
 .hamburger .menu-box .bar {
+  display: block;
   width: 100%;
   height: 5px;
   background-color: #fff;
