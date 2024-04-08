@@ -125,10 +125,11 @@ footer {
 .footer-bottom {
   width: 100%;
   background-color: $footer-dark;
-  font-size: 13px;
+  font-size: 14px;
   padding-top: 10px;
 
   & .copy-info {
+    line-height: 22px;
     padding: 5px 0 10px;
     color: $white;
 

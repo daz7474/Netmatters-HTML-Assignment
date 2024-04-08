@@ -2801,10 +2801,11 @@ footer .footer-row .col a:link:hover, footer .footer-row .col a:visited:hover {
 .footer-bottom {
   width: 100%;
   background-color: #212330;
-  font-size: 13px;
+  font-size: 14px;
   padding-top: 10px;
 }
 .footer-bottom .copy-info {
+  line-height: 22px;
   padding: 5px 0 10px;
   color: #fff;
 }
