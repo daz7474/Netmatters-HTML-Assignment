@@ -5,15 +5,33 @@
 // Get ref to burger menu button
 const menuBtn = document.querySelector(".hamburger");
 const sideMenu = document.querySelector(".side-menu");
-const burgerBars = document.querySelectorAll(".bar");
+const burgerBar = document.querySelector(".bar");
 // Get ref to body element
 const body = document.querySelector("body");
 
-// On click, toggles class "side-menu-open" to show/hide
+let canClose = false;
+// On click, add class "side-menu-open" to show/hide
 menuBtn.addEventListener("click", () => {
   sideMenu.classList.toggle("side-menu-open");
-  // Toggles margins on the body when menu is open
+  // toggle margins on the body when menu is open
   body.classList.toggle("body-adjusted");
-  // Toggles the class "x" to add/remove a cross
-  burgerBars.forEach(bar => bar.classList.toggle('x'));
+  // toggle the class "rotate"
+  setTimeout(() => {
+    burgerBar.classList.toggle("rotate");
+  }, 100)
+  setTimeout(() => {
+    canClose = true
+  }, 100);
+  canClose = false;
+});
+
+body.addEventListener("click", () => {
+  if (canClose) {
+    sideMenu.classList.remove("side-menu-open");
+    body.classList.remove("body-adjusted");
+    setTimeout(() => {
+      burgerBar.classList.remove("rotate");
+    }, 150)
+    canClose = false;
+  }
 });
