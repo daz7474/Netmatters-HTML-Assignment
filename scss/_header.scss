@@ -162,34 +162,51 @@
     height: 33px;
 
     & .bar {
+      content: "";
+      position: absolute;
+      top: 50%;
       display: block;
       width: 100%;
-      height: 5px;
+      height: 4px;
       background-color: $white;
-      margin: 6px 0;
-      transition: all 100ms ease-in-out;
+      transition: all .2s ease;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 4px;
+        background-color: $white;
+        transition: all .2s ease;
+      }
+
+      &::before {
+        top: -10px;
+      }
+
+      &::after {
+        top: 10px;
+      }
     }
 
-    .x:nth-of-type(1) {
-      transition: all 100ms ease-in-out;
-      transform: rotate(45deg);
-      transform-origin: top left;
-      width: 99%;
-      margin-left: 7px;
-    }
+    & .rotate {
+      background: none;
+      transform: rotate(180deg);
+      transition: all .2s ease;
 
-    .x:nth-of-type(2) {
-      transition: all 100ms ease-in-out;
-      transform-origin: center;
-      width: 0;
-    }
+      &::before {
+        top: 0;
+        transform: rotate(45deg);
+        transition: all .2s ease;
+      }
 
-    .x:nth-of-type(3) {
-      transition: all 100ms ease-in-out;
-      transform: rotate(-45deg);
-      transform-origin: bottom left;
-      width: 99%;
-      margin-left: 7px;
+      &::after {
+        top: 0;
+        transform: rotate(-45deg);
+        transition: all .2s ease;
+      }
     }
   }
 }

@@ -1576,31 +1576,44 @@ button {
   height: 33px;
 }
 .hamburger .menu-box .bar {
+  content: "";
+  position: absolute;
+  top: 50%;
   display: block;
   width: 100%;
-  height: 5px;
+  height: 4px;
   background-color: #fff;
-  margin: 6px 0;
-  transition: all 100ms ease-in-out;
+  transition: all 0.2s ease;
 }
-.hamburger .menu-box .x:nth-of-type(1) {
-  transition: all 100ms ease-in-out;
+.hamburger .menu-box .bar::before, .hamburger .menu-box .bar::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: #fff;
+  transition: all 0.2s ease;
+}
+.hamburger .menu-box .bar::before {
+  top: -10px;
+}
+.hamburger .menu-box .bar::after {
+  top: 10px;
+}
+.hamburger .menu-box .rotate {
+  background: none;
+  transform: rotate(180deg);
+  transition: all 0.2s ease;
+}
+.hamburger .menu-box .rotate::before {
+  top: 0;
   transform: rotate(45deg);
-  transform-origin: top left;
-  width: 99%;
-  margin-left: 7px;
+  transition: all 0.2s ease;
 }
-.hamburger .menu-box .x:nth-of-type(2) {
-  transition: all 100ms ease-in-out;
-  transform-origin: center;
-  width: 0;
-}
-.hamburger .menu-box .x:nth-of-type(3) {
-  transition: all 100ms ease-in-out;
+.hamburger .menu-box .rotate::after {
+  top: 0;
   transform: rotate(-45deg);
-  transform-origin: bottom left;
-  width: 99%;
-  margin-left: 7px;
+  transition: all 0.2s ease;
 }
 
 .search-form-mobile {
@@ -2068,7 +2081,8 @@ button {
   background-color: #333645;
   width: 275px;
   height: 100vh;
-  overflow-x: hidden;
+  overflow-x: clip;
+  overflow-y: scroll;
   z-index: 1003;
 }
 @media (min-width: 992px) {
@@ -2204,6 +2218,7 @@ button {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.4);
+  cursor: pointer;
   z-index: 99;
 }
 
