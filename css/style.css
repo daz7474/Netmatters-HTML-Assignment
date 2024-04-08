@@ -870,6 +870,7 @@ button {
   border-top: 0;
   border-radius: 0 0 3px 3px;
   box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
+  font-size: 14px;
   padding: 30px;
   margin-top: -5px;
 }
@@ -884,12 +885,12 @@ button {
 }
 .latest-news .col .content h3 {
   font-size: 16px;
+  font-weight: 600;
   line-height: 24px;
   margin-bottom: 15px;
 }
 .latest-news .col .content p {
   line-height: 22px;
-  font-size: 13px;
   margin-bottom: 25px;
 }
 .latest-news .col .content .user {
@@ -901,6 +902,10 @@ button {
 }
 .latest-news .col .content .user .avatar {
   border-radius: 50%;
+  overflow: hidden;
+}
+.latest-news .col .content .user .avatar img {
+  max-width: 47px;
 }
 .latest-news .col .content .user .details {
   padding-left: 20px;
@@ -910,6 +915,7 @@ button {
   display: inline;
   text-transform: uppercase;
   font-size: 13.5px;
+  font-weight: 400;
   color: rgba(51, 54, 69, 0.5);
   vertical-align: middle;
 }
@@ -984,6 +990,7 @@ button {
   padding: 0 15px;
 }
 .news-heading-bottom a {
+  font-weight: 600;
   color: #454555;
 }
 .news-heading-bottom a:hover {
