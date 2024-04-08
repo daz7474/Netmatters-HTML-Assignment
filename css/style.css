@@ -1435,6 +1435,16 @@ button {
   font-size: 32px;
 }
 
+.sticky-header {
+  position: relative;
+  background-color: #fff;
+  z-index: 10;
+}
+.sticky-header.sticky {
+  position: sticky;
+  top: 0;
+}
+
 .scroll-down {
   position: relative;
   transform: translateY(-100%);
@@ -1448,10 +1458,6 @@ button {
   transform: translateY(0);
   transition: 0.5s ease;
   z-index: 100;
-}
-
-#header {
-  background-color: #fff;
 }
 
 .nav-container {

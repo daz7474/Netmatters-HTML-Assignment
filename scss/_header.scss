@@ -2,6 +2,17 @@
 // Header
 // ==========================================================================
 
+.sticky-header {
+  position: relative;
+  background-color: $white;
+  z-index: 10;
+
+  &.sticky {
+    position: sticky;
+    top: 0;
+  }
+}
+
 .scroll-down {
   position: relative;
   transform: translateY(-100%);
@@ -15,10 +26,6 @@
   transform: translateY(0);
   transition: .5s ease;
   z-index: 100;
-}
-
-#header {
-  background-color: $white;
 }
 
 .nav-container {

@@ -1,23 +1,67 @@
-const header = document.getElementById("header");
-let lastScroll = 0;
+const startSticky = 250;
 
-window.addEventListener("scroll", () => {
-  // Set to current pages scroll
-  const currentScroll = window.pageYOffset
+let prevScroll = 0;
+let stickyHeaderActive = true;
 
-  // If at the top, remove the "scoll-up" class
-  if (currentScroll <= 0) {
-    header.classList.remove("scroll-up")
-  } // If scrolled past 350px, add the "scoll-down" class
-  else if (currentScroll > lastScroll && currentScroll > 350) {
-    header.classList.remove("scroll-up");
-    header.classList.add("scroll-down");
-  } // If scrolling up and "scroll-down" is on, remove and add "scroll-up"
-  else if (currentScroll < lastScroll && header.classList.contains("scroll-down")) {
-    header.classList.remove("scroll-down");
-    header.classList.add("scroll-up");
+let scrollUpTimeout;
+
+// Adds checkScrolling to scroll event
+$(".main-content").on('scroll', checkScrolling);
+
+// Should the header be sticky when scrolling
+function checkScrolling() {
+  let scroll = $(".main-content").scrollTop();
+
+  //Checks if scroll direction was up or down
+  if (scroll > prevScroll) {
+    //Show header
+    if (scroll > startSticky) {
+      if (stickyHeaderActive) {
+        stickyHeaderActive = false;
+        slideHeader(false, 0.5);
+
+        scrollUpTimeout = setTimeout(() => {
+          $(".sticky-header").removeClass("sticky");
+        }, 500);
+      }
+    }
+    else {
+      $(".sticky-header").removeClass("sticky");
+    }
+  }
+  else {
+    //Hide header
+    if (scroll > startSticky) {
+      if (!stickyHeaderActive) {
+        stickyHeaderActive = true;
+        clearTimeout(scrollUpTimeout);
+
+        $(".sticky-header").addClass("sticky");
+        slideHeader(true, 0.5);
+      }
+    }
+    else {
+      $(".sticky-header").removeClass("sticky");
+    }
   }
 
-  // Set last scroll to current page scroll
-  lastScroll = currentScroll;
-})
+  prevScroll = scroll;
+}
+
+// Slides up or down
+function slideHeader(down, time) {
+  from = "0";
+  to = "-100%";
+  if (down) {
+    from = $(".sticky-header").css("top");
+    to = "0";
+  }
+
+  $(".sticky-header").css("transition", "all 0s");
+  $(".sticky-header").css("top", from);
+
+  setTimeout(() => {
+    $(".sticky-header").css("transition", `all ${time}s`);
+    $(".sticky-header").css("top", to);
+  }, 200);
+}
