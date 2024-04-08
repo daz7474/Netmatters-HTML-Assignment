@@ -5,16 +5,16 @@ let stickyHeaderActive = true;
 
 let scrollUpTimeout;
 
-// Adds checkScrolling to scroll event
+// Add checkScrolling to scroll event
 $(".main-content").on('scroll', checkScrolling);
 
 // Should the header be sticky when scrolling
 function checkScrolling() {
   let scroll = $(".main-content").scrollTop();
 
-  //Checks if scroll direction was up or down
+  // Check if scroll was up or down
   if (scroll > prevScroll) {
-    //Show header
+    // Show header
     if (scroll > startSticky) {
       if (stickyHeaderActive) {
         stickyHeaderActive = false;
@@ -30,7 +30,7 @@ function checkScrolling() {
     }
   }
   else {
-    //Hide header
+    // Hide header
     if (scroll > startSticky) {
       if (!stickyHeaderActive) {
         stickyHeaderActive = true;
