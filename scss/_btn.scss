@@ -83,62 +83,7 @@
   }
 
   // Service button colors
-
-  &-bespoke {
-    background-color: $bespoke-color;
-
-    &:hover {
-      background-color: $bespoke-color-hvr;
-    }
-  }
-
-  &-IT {
-    background-color: $IT-color;
-
-    &:hover {
-      background-color: $IT-color-hvr;
-    }
-  }
-
-  &-digital {
-    background-color: $digital-color;
-
-    &:hover {
-      background-color: $digital-color-hvr;
-    }
-  }
-
-  &-telecoms {
-    background-color: $telecoms-color;
-
-    &:hover {
-      background-color: $telecoms-color-hvr;
-    }
-  }
-
-  &-web {
-    background-color: $web-color;
-
-    &:hover {
-      background-color: $web-color-hvr;
-    }
-  }
-
-  &-cyber {
-    background-color: $cyber-color;
-
-    &:hover {
-      background-color: $cyber-color-hvr;
-    }
-  }
-
-  &-developer {
-    background-color: $developer-color;
-
-    &:hover {
-      background-color: $developer-color-hvr;
-    }
-  }
+  @include services($service-colors);
 
   // Brand color
 

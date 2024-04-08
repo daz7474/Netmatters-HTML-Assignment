@@ -249,36 +249,11 @@
 }
 
 .nav-box {
+  background-color: inherit !important;
   width: 133px;
   text-align: center;
-
-  & .bespoke {
-    background-color: $bespoke-color-hvr;
-  }
-
-  & .IT {
-    background-color: $IT-color-hvr;
-  }
-
-  & .digital {
-    background-color: $digital-color-hvr;
-  }
-
-  & .telecoms {
-    background-color: $telecoms-color-hvr;
-  }
-
-  & .web {
-    background-color: $web-color-hvr;
-  }
-
-  & .cyber {
-    background-color: $cyber-color-hvr;
-  }
-
-  & .developer {
-    background-color: $developer-color-hvr;
-  }
+  @include services($service-colors);
+  @include services-hvr($service-colors-hvr);
 
   &:hover {
 

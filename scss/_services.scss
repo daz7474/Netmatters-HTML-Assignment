@@ -109,7 +109,7 @@
   top: 0;
   text-align: center;
   color: $dark-grey;
-  background-color: $white;
+  background-color: $white !important;
   border: 1px solid $accent;
   border-radius: 15px;
   box-shadow: 0 3px 35px rgba(0, 0, 0, .1);

@@ -83,13 +83,28 @@ $service-colors: (
   'developer': #ce4125,
 );
 
-// Service each loop
+$service-colors-hvr: (
+  'bespoke': #566c88,
+  'IT': #2a6ec6,
+  'digital': #25a25a,
+  'telecoms': #bc2c28,
+  'web': #7e57a0,
+  'cyber': #de093f,
+  'developer': #a3331d,
+);
+
+// Service mixin
 
 @mixin services($map) {
 
   @each $service,
   $service-color in $service-colors {
     &-#{$service} {
+      background-color: $service-color;
+
+      .nav-box {
+        background-color: $service-color;
+      }
 
       .card-icon,
       .btn-card {
@@ -115,7 +130,7 @@ $service-colors: (
 
     &-#{$service}:hover {
       color: $white;
-      background-color: $service-color;
+      background-color: $service-color !important;
       border-color: $service-color;
       top: -10px;
 
@@ -137,7 +152,20 @@ $service-colors: (
   }
 }
 
-// Socials colour loop
+@mixin services-hvr($map) {
+
+  @each $service,
+  $service-color-hvr in $service-colors-hvr {
+    &-#{$service} {
+
+      .secondary-nav-container {
+        background-color: $service-color-hvr;
+      }
+    }
+  }
+}
+
+// Socials mixin
 
 @mixin socials($map) {
 
