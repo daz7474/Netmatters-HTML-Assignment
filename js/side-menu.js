@@ -6,14 +6,14 @@
 const menuBtn = document.querySelector(".hamburger");
 const sideBar = document.getElementById("side-bar");
 const burgerBar = document.querySelector(".bar");
-// Get ref to body element
+// Get ref to main content container element
 const mainContent = document.getElementById("main-content-container");
 
 let canClose = false;
 // On click, add class "side-menu-open" to show/hide
 menuBtn.addEventListener("click", () => {
   sideBar.classList.toggle("side-bar-open");
-  // toggle margins on the body when menu is open
+  // toggle overlay on the main content when menu is open
   mainContent.classList.toggle("side-bar-open");
   // toggle the class "rotate"
   setTimeout(() => {
