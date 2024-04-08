@@ -171,8 +171,11 @@ $service-colors-hvr: (
 
   @each $social,
   $social-color in $social-colors {
+    .btn-#{$social} {
+      color: $white;
+    }
 
-    &-#{$social}:hover {
+    .btn-#{$social}:hover {
       background-color: $social-color;
     }
   }

@@ -40,21 +40,31 @@ footer {
         flex-wrap: nowrap;
         max-width: 300px;
         margin-bottom: 30px;
+        @include socials($social-colors);
 
         @include mq('2xs') {
           flex-wrap: wrap;
         }
 
         & a {
+          background-color: $footer-dark;
           width: 35%;
+          text-align: center;
           font-size: 26px;
+          line-height: 26px;
           padding: 12px 22px 16px;
           margin-right: 10px;
           margin-bottom: 10px;
 
           & span {
             position: relative;
+            font-size: 26px;
             top: 4px;
+          }
+
+          @include mq('lg') {
+            margin-right: 7px;
+            margin-bottom: 0;
           }
         }
 

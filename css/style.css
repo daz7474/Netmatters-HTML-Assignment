@@ -1433,18 +1433,6 @@ button {
   left: 13px;
   font-size: 32px;
 }
-.btn-facebook:hover {
-  background-color: #3b5998;
-}
-.btn-linkedin:hover {
-  background-color: #0077b5;
-}
-.btn-twitter:hover {
-  background-color: #00aced;
-}
-.btn-instagram:hover {
-  background-color: #d93175;
-}
 
 .scroll-down {
   position: relative;
@@ -2714,21 +2702,55 @@ footer .footer-row .company-info .company-socials {
   max-width: 300px;
   margin-bottom: 30px;
 }
+footer .footer-row .company-info .company-socials .btn-facebook {
+  color: #fff;
+}
+footer .footer-row .company-info .company-socials .btn-facebook:hover {
+  background-color: #3b5998;
+}
+footer .footer-row .company-info .company-socials .btn-linkedin {
+  color: #fff;
+}
+footer .footer-row .company-info .company-socials .btn-linkedin:hover {
+  background-color: #0077b5;
+}
+footer .footer-row .company-info .company-socials .btn-twitter {
+  color: #fff;
+}
+footer .footer-row .company-info .company-socials .btn-twitter:hover {
+  background-color: #00aced;
+}
+footer .footer-row .company-info .company-socials .btn-instagram {
+  color: #fff;
+}
+footer .footer-row .company-info .company-socials .btn-instagram:hover {
+  background-color: #d93175;
+}
 @media (max-width: 480px) {
   footer .footer-row .company-info .company-socials {
     flex-wrap: wrap;
   }
 }
 footer .footer-row .company-info .company-socials a {
+  background-color: #212330;
   width: 35%;
+  text-align: center;
   font-size: 26px;
+  line-height: 26px;
   padding: 12px 22px 16px;
   margin-right: 10px;
   margin-bottom: 10px;
 }
 footer .footer-row .company-info .company-socials a span {
   position: relative;
+  font-size: 26px;
   top: 4px;
+}
+@media (min-width: 1260px) {
+  footer .footer-row .company-info .company-socials a {
+    margin-right: 7px;
+    margin-bottom: 0;
+  }
 }
 @media (min-width: 768px) {
   footer .footer-row .company-info .company-socials {
