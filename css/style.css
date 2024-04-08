@@ -2223,6 +2223,10 @@ button {
   z-index: 100;
 }
 
+.lock {
+  overflow-y: hidden;
+}
+
 .container {
   margin-right: auto;
   margin-left: auto;
@@ -2620,7 +2624,7 @@ button {
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 100;
+  z-index: 110;
   background-color: rgba(0, 0, 0, 0.7);
   overflow-x: hidden;
   overflow-y: auto;
