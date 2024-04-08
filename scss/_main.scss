@@ -489,12 +489,27 @@
   & .cookie-box {
     position: relative;
     background-color: $white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+    border: 1px solid rgba(0, 0, 0, .2);
     border-radius: 5px;
     width: 90%;
     margin: auto;
 
-    & .cookie-title,
+    & .cookie-title {
+      font-size: 26px;
+      border-bottom: 1px solid #e5e5e5;
+      padding: 15px 20px;
+
+      & h3 {
+        font-size: 28px;
+        line-height: 1.42857143;
+        margin: 0;
+      }
+    }
+
     & .cookie-content {
+      color: $grey;
+      font-size: 18px;
       border-bottom: 1px solid #e5e5e5;
       padding: 20px;
     }
