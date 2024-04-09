@@ -181,6 +181,21 @@ $service-colors-hvr: (
   }
 }
 
+@mixin btnStyle($color) {
+  display: inline-block;
+  font-size: 17px;
+  color: $white;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 35px;
+  background-color: $color;
+  padding: 5px 15px;
+  margin-top: auto;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
 // Breakpoints
 
 $breakpoints: (
