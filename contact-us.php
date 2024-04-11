@@ -20,7 +20,7 @@
         <div class="container">
           <ul class="library">
             <li>
-              <a href="/">Home</a>
+              <a href="index.php">Home</a>
             </li>
 
             <li>
