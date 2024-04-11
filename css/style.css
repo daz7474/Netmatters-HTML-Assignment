@@ -1449,6 +1449,9 @@ button {
   color: #333645;
   font-weight: 700;
 }
+.library-container .library a:hover {
+  text-decoration: underline;
+}
 .library-container .library > :nth-last-child(1)::before {
   content: "/";
   padding: 0 5px;
@@ -1513,6 +1516,9 @@ button {
 }
 .office-addresses .office-list .office-container .office-card .office-content .h2 a {
   color: #333645;
+}
+.office-addresses .office-list .office-container .office-card .office-content .h2 a:hover {
+  text-decoration: underline;
 }
 .office-addresses .office-list .office-container .office-card .office-content .address {
   color: #666;

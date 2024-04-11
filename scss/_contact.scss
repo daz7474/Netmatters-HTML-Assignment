@@ -1,5 +1,7 @@
 // Contact page
 
+// Page nav
+
 .library-container {
   display: none;
   border-top: 1px solid #333645;
@@ -13,6 +15,10 @@
     & a {
       color: $brand-primary;
       font-weight: 700;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
 
     &>:nth-last-child(1)::before {
@@ -25,6 +31,8 @@
     display: block;
   }
 }
+
+// Header
 
 .page-header {
   background-color: $brand-primary;
@@ -49,6 +57,8 @@
     margin-top: 0;
   }
 }
+
+// Offices
 
 .office-addresses {
   margin-bottom: 40px;
@@ -80,6 +90,10 @@
 
           & .h2 a {
             color: $brand-primary;
+
+            &:hover {
+              text-decoration: underline;
+            }
           }
 
           & .address {
