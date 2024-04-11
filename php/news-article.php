@@ -11,7 +11,7 @@ function getNews($conn)
   }
 }
 
-function newsContent($image, $imageAlt, $title, $readTime, $info, $type, $authorImage, $authorName, $date, $counter)
+function newsContent($image, $imageAlt, $title, $readTime, $info, $button, $type, $authorImage, $authorName, $date, $counter)
 {
   return '
               <div class="col">
@@ -32,7 +32,7 @@ function newsContent($image, $imageAlt, $title, $readTime, $info, $type, $author
                       ' . $info . '
                     </p>
 
-                    <a class="btn btn-bespoke" href="#">Read More</a>
+                    <a class="btn btn-' . $button . '" href="#">Read More</a>
 
                     <div class="user">
                       <div class="avatar">
@@ -60,6 +60,7 @@ foreach(getNews($conn) as $news) {
     $news["title"], 
     $news["read_time"], 
     $news["info"],
+    $news["button"],
     $news['type'], 
     $news["author_image"], 
     $news["author_name"], 
