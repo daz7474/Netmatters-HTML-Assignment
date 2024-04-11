@@ -23,7 +23,7 @@
                   </div>
 
                   <div class="main-nav--item">
-                    <a class="btn btn-contact" href="#">
+                    <a class="btn btn-contact" href="contact-us.php">
                       <span class="icon-paperplane"></span>
                       Contact
                     </a>
