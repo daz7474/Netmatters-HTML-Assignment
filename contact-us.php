@@ -11,6 +11,12 @@
 <body>
   <?php @include("php/header.php") ?>
 
+  <div class="container">
+
+
+  
+  </div>
+
   <?php @include("php/footer.php") ?>
   <?php @include("php/side-menu.php") ?>
   
