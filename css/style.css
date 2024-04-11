@@ -1435,6 +1435,48 @@ button {
   font-size: 32px;
 }
 
+.library-container {
+  display: none;
+  border-top: 1px solid #333645;
+  box-shadow: 0 5px 35px rgba(0, 0, 0, 0.1);
+  padding: 14px 0 13px;
+}
+.library-container .library {
+  display: flex;
+  font-size: 14px;
+}
+.library-container .library a {
+  color: #333645;
+  font-weight: 700;
+}
+.library-container .library > :nth-last-child(1)::before {
+  content: "/";
+  padding: 0 5px;
+}
+@media (min-width: 768px) {
+  .library-container {
+    display: block;
+  }
+}
+
+.page-header {
+  background-color: #333645;
+  color: #fff;
+  padding: 24px 0;
+  margin-bottom: 50px;
+  margin-top: -50px;
+}
+.page-header h1 {
+  margin: 0;
+}
+@media (min-width: 992px) {
+  .page-header {
+    background-color: transparent;
+    color: #333645;
+    margin-top: 0;
+  }
+}
+
 .sticky-header {
   position: relative;
   background-color: #fff;
