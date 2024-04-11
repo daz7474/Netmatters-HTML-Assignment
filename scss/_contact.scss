@@ -1,0 +1,104 @@
+// Contact page
+
+.library-container {
+  display: none;
+  border-top: 1px solid #333645;
+  box-shadow: 0 5px 35px rgba(0, 0, 0, .1);
+  padding: 14px 0 13px;
+
+  & .library {
+    display: flex;
+    font-size: 14px;
+
+    & a {
+      color: $brand-primary;
+      font-weight: 700;
+    }
+
+    &>:nth-last-child(1)::before {
+      content: "/";
+      padding: 0 5px;
+    }
+  }
+
+  @include mq('sm') {
+    display: block;
+  }
+}
+
+.page-header {
+  background-color: $brand-primary;
+  color: $white;
+  padding: 24px 0;
+  margin-bottom: 50px;
+  margin-top: -50px;
+
+  & h1 {
+    margin-bottom: 0;
+
+    @include mq('md') {
+      margin-bottom: 28px;
+      margin-top: -25px;
+    }
+  }
+
+  @include mq('md') {
+    background-color: transparent;
+    color: $brand-primary;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+}
+
+.office-addresses {
+  margin-bottom: 40px;
+
+  & .office-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    & .office-container {
+      padding: 0 15px;
+
+      & .office-card {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid $accent;
+        border-radius: 20px 20px 0 0;
+        margin-top: 30px;
+
+        & img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 20px 20px 0 0;
+        }
+
+        & .office-content {
+          padding: 30px;
+
+          & .h2 a {
+            color: $brand-primary;
+          }
+
+          & .address {
+            color: $grey;
+            font-size: 14px;
+            line-height: 22px;
+          }
+
+          & .tel {
+            color: $web-color;
+            font-size: 26px;
+            font-weight: 700;
+          }
+        }
+      }
+
+      @include mq('md') {
+        width: 50%;
+      }
+    }
+  }
+}

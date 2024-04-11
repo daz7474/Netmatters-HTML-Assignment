@@ -1467,13 +1467,66 @@ button {
   margin-top: -50px;
 }
 .page-header h1 {
-  margin: 0;
+  margin-bottom: 0;
+}
+@media (min-width: 992px) {
+  .page-header h1 {
+    margin-bottom: 28px;
+    margin-top: -25px;
+  }
 }
 @media (min-width: 992px) {
   .page-header {
     background-color: transparent;
     color: #333645;
+    margin-bottom: 0;
     margin-top: 0;
+  }
+}
+
+.office-addresses {
+  margin-bottom: 40px;
+}
+.office-addresses .office-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.office-addresses .office-list .office-container {
+  padding: 0 15px;
+}
+.office-addresses .office-list .office-container .office-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  border-radius: 20px 20px 0 0;
+  margin-top: 30px;
+}
+.office-addresses .office-list .office-container .office-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px 20px 0 0;
+}
+.office-addresses .office-list .office-container .office-card .office-content {
+  padding: 30px;
+}
+.office-addresses .office-list .office-container .office-card .office-content .h2 a {
+  color: #333645;
+}
+.office-addresses .office-list .office-container .office-card .office-content .address {
+  color: #666;
+  font-size: 14px;
+  line-height: 22px;
+}
+.office-addresses .office-list .office-container .office-card .office-content .tel {
+  color: #926fb1;
+  font-size: 26px;
+  font-weight: 700;
+}
+@media (min-width: 992px) {
+  .office-addresses .office-list .office-container {
+    width: 50%;
   }
 }
 
@@ -2325,6 +2378,10 @@ button {
 .col {
   padding-left: 15px;
   padding-right: 15px;
+}
+
+.top {
+  padding-bottom: 0;
 }
 
 .h2 {
