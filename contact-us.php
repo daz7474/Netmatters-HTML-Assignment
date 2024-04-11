@@ -12,8 +12,8 @@
     <div class="main-content">
 
       <?php
-      @include("php/cookies.php");
-      @include("php/header.php");
+      @include("include/cookies.php");
+      @include("include/header.php");
       ?>
 
       <div class="library-container">
@@ -198,14 +198,14 @@
         </div>
       </div>
 
-    <?php @include("php/newsletter.php") ?>
+    <?php @include("include/newsletter.php") ?>
 
-    <?php @include("php/footer.php") ?>
+    <?php @include("include/footer.php") ?>
 
     </div>
   </div>
 
-  <?php @include("php/side-menu.php") ?>
+  <?php @include("include/side-menu.php") ?>
   
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
