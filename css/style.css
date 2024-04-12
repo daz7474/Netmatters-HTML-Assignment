@@ -1,7 +1,7 @@
 @font-face {
   font-family: "icomoon";
-  src: url("../fonts/icomoon.eot?5gpnkr");
-  src: url("../fonts/icomoon.eot?5gpnkr#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?5gpnkr") format("truetype"), url("../fonts/icomoon.woff?5gpnkr") format("woff"), url("../fonts/icomoon.svg?5gpnkr#icomoon") format("svg");
+  src: url("../fonts/icomoon.eot?in067v");
+  src: url("../fonts/icomoon.eot?in067v#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?in067v") format("truetype"), url("../fonts/icomoon.woff?in067v") format("woff"), url("../fonts/icomoon.svg?in067v#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -159,6 +159,10 @@
 
 .icon-briefcase:before {
   content: "\e906";
+}
+
+.icon-keyboard_arrow_down:before {
+  content: "\e91e";
 }
 
 .icon-double_arrow:before {
@@ -1582,6 +1586,109 @@ button {
   }
 }
 
+.contact-outer {
+  display: flex;
+  flex-direction: column;
+}
+.contact-outer .contact-info-container {
+  padding: 0 15px;
+}
+.contact-outer .contact-info-container .contact-info a {
+  color: #926fb1;
+  font-size: 26px;
+  font-weight: 600;
+}
+.contact-outer .contact-info-container .contact-info a:hover {
+  text-decoration: underline;
+}
+.contact-outer .contact-info-container .accordion a {
+  color: #333645;
+  font-weight: 600;
+}
+.contact-outer .contact-info-container .accordion a span {
+  font-weight: 600;
+  vertical-align: sub;
+}
+.contact-outer .contact-info-container .accordion a:hover {
+  text-decoration: underline;
+}
+.contact-outer .contact-info-container .accordion .accordion-info {
+  display: none;
+}
+.contact-outer .contact-info-container .accordion .accordion-info p {
+  color: #666;
+}
+.contact-outer .contact-info-container .accordion .accordion-info p strong {
+  color: #333645;
+}
+.contact-outer .contact-info-container .accordion .accordion-active {
+  display: block;
+}
+@media (min-width: 1260px) {
+  .contact-outer .contact-info-container {
+    width: 35%;
+  }
+}
+.contact-outer .contact-container {
+  width: 100%;
+}
+.contact-outer .contact-container #contact-form {
+  background-color: #e6e7e9;
+  border-radius: 10px;
+  padding: 30px;
+  margin-right: 15px;
+}
+.contact-outer .contact-container #contact-form label {
+  font-weight: 600;
+}
+.contact-outer .contact-container #contact-form .sign-up-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+.contact-outer .contact-container #contact-form .sign-up-input {
+  flex: 1 1 450px;
+  padding: 0 15px;
+}
+@media (min-width: 1260px) {
+  .contact-outer .contact-container #contact-form .sign-up-input {
+    flex: 1 1 250px;
+  }
+}
+.contact-outer .contact-container #contact-form .button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.contact-outer .contact-container #contact-form #message {
+  padding: 5px 15px;
+}
+.contact-outer .contact-container #contact-form #message::placeholder {
+  font-family: "Poppins", sans-serif;
+}
+.contact-outer .contact-container #contact-form .policy-container {
+  font-weight: 400;
+}
+.contact-outer .contact-container #contact-form .captcha-container {
+  font-size: 11px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+.contact-outer .contact-container #contact-form .required {
+  color: #d24d57;
+  font-size: 18px;
+}
+@media (min-width: 1260px) {
+  .contact-outer .contact-container {
+    width: 65%;
+  }
+}
+@media (min-width: 1260px) {
+  .contact-outer {
+    flex-direction: row-reverse;
+  }
+}
+
 .sticky-header {
   position: relative;
   background-color: #fff;
@@ -2457,6 +2564,10 @@ button {
   padding-bottom: 0;
 }
 
+.bottom {
+  padding-top: 0;
+}
+
 .h2 {
   font-size: 21px;
   padding-bottom: 10px;
@@ -2740,42 +2851,46 @@ button {
 .newsletter .required {
   color: red;
 }
-.newsletter .sign-up-container {
+
+.sign-up-container {
   display: flex;
   flex-wrap: wrap;
   margin: 0 -15px;
 }
-.newsletter .sign-up-input {
+
+.sign-up-input {
   flex: 1 1 450px;
   padding: 0 15px;
 }
-.newsletter .form-group {
+
+.form-group {
   margin-bottom: 15px;
 }
-.newsletter .form-group a:link, .newsletter .form-group a:visited {
+.form-group a:link, .form-group a:visited {
   color: #000;
   text-decoration: underline;
 }
-.newsletter .form-group label {
+.form-group label {
   display: inline-block;
   margin-bottom: 5px;
 }
-.newsletter .form-group input {
+.form-group input {
   border: 1px solid #e5e5e5;
 }
-.newsletter .form-group input:focus {
+.form-group input:focus {
   border-color: #5bc0de;
   outline: 0;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(91, 192, 222, 0.6);
 }
-.newsletter .form-group .policy-container {
+.form-group .policy-container {
   display: flex;
   position: relative;
+  font-weight: 400;
   line-height: 32px;
   padding-left: 52px;
   cursor: pointer;
 }
-.newsletter .form-group .policy-container::before {
+.form-group .policy-container::before {
   content: "";
   width: 26px;
   height: 26px;
@@ -2786,10 +2901,10 @@ button {
   left: 0;
   top: 0;
 }
-.newsletter .form-group .policy-container #checkbox {
+.form-group .policy-container #checkbox, .form-group .policy-container #checkbox-contact {
   display: none;
 }
-.newsletter .form-group .policy-container #checkbox:checked + span::before {
+.form-group .policy-container #checkbox:checked + span::before, .form-group .policy-container #checkbox-contact:checked + span::before {
   content: "";
   position: absolute;
   width: 32px;
@@ -2799,7 +2914,7 @@ button {
   top: 0;
   border-radius: 3px;
 }
-.newsletter .form-group .policy-container #checkbox:checked + span::after {
+.form-group .policy-container #checkbox:checked + span::after, .form-group .policy-container #checkbox-contact:checked + span::after {
   content: "";
   display: block;
   position: absolute;
