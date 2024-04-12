@@ -1,6 +1,5 @@
 // Global Config
 
-
 // Import if google fonts URL is defined
 
 @if variable-exists(font-url--google) {
@@ -102,7 +101,7 @@ $service-colors-hvr: (
       background-color: $service-color;
 
       .nav-box {
-        background-color: $service-color;
+        background-color: $service-color !important;
       }
 
       .card-icon,
@@ -156,6 +155,10 @@ $service-colors-hvr: (
   @each $service,
   $service-color-hvr in $service-colors-hvr {
     &-#{$service} {
+
+      &:hover {
+        background-color: $service-color-hvr !important;
+      }
 
       .secondary-nav-container {
         background-color: $service-color-hvr;
