@@ -380,98 +380,101 @@
   & .required {
     color: red;
   }
+}
 
-  & .sign-up-container {
+.sign-up-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+.sign-up-input {
+  flex: 1 1 450px;
+  padding: 0 15px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+
+  & a:link,
+  & a:visited {
+    color: $black;
+    text-decoration: underline;
+  }
+
+  & label {
+    display: inline-block;
+    margin-bottom: 5px;
+  }
+
+  & input {
+    border: 1px solid #e5e5e5;
+
+    &:focus {
+      border-color: #5bc0de;
+      outline: 0;
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(91, 192, 222, .6)
+    }
+  }
+
+  & .policy-container {
     display: flex;
-    flex-wrap: wrap;
-    margin: 0 -15px;
-  }
+    position: relative;
+    font-weight: 400;
+    line-height: 32px;
+    padding-left: 52px;
+    cursor: pointer;
 
-  & .sign-up-input {
-    flex: 1 1 450px;
-    padding: 0 15px;
-  }
+    // Checkbox border
 
-  & .form-group {
-    margin-bottom: 15px;
-
-    & a:link,
-    & a:visited {
-      color: $black;
-      text-decoration: underline;
+    &::before {
+      content: "";
+      width: 26px;
+      height: 26px;
+      border: 3px solid $brand-primary;
+      border-radius: 3px;
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
     }
 
-    & label {
-      display: inline-block;
-      margin-bottom: 5px;
+    // Hide original input checkbox
+
+    & #checkbox,
+    & #checkbox-contact {
+      display: none;
     }
 
-    & input {
-      border: 1px solid #e5e5e5;
+    // Checkbox background
 
-      &:focus {
-        border-color: #5bc0de;
-        outline: 0;
-        box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(91, 192, 222, .6)
-      }
-    }
-
-    & .policy-container {
-      display: flex;
-      position: relative;
-      line-height: 32px;
-      padding-left: 52px;
-      cursor: pointer;
-
-      // Checkbox border
-
-      &::before {
+    & #checkbox:checked,
+    & #checkbox-contact:checked {
+      +span::before {
         content: "";
-        width: 26px;
-        height: 26px;
-        border: 3px solid $brand-primary;
-        border-radius: 3px;
-        display: block;
         position: absolute;
+        width: 32px;
+        height: 32px;
+        background-color: $brand-primary;
         left: 0;
         top: 0;
+        border-radius: 3px;
       }
 
-      // Hide original input checkbox
+      // Checkbox tick mark
 
-      & #checkbox {
-        display: none;
-      }
-
-      // Checkbox background
-
-      & #checkbox:checked {
-        +span::before {
-          content: "";
-          position: absolute;
-          width: 32px;
-          height: 32px;
-          background-color: $brand-primary;
-          left: 0;
-          top: 0;
-          border-radius: 3px;
-        }
-
-        // Checkbox tick mark
-
-        +span::after {
-          content: "";
-          display: block;
-          position: absolute;
-          width: 13px;
-          height: 5px;
-          border-left: 2.5px solid $white;
-          border-bottom: 2.5px solid $white;
-          transform: rotate(-45deg);
-          left: 8px;
-          top: 11px;
-          color: $white;
-        }
+      +span::after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 13px;
+        height: 5px;
+        border-left: 2.5px solid $white;
+        border-bottom: 2.5px solid $white;
+        transform: rotate(-45deg);
+        left: 8px;
+        top: 11px;
+        color: $white;
       }
     }
   }
