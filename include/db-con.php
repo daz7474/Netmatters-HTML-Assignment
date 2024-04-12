@@ -1,19 +1,19 @@
 <?php
 
+$pdo = null;
+
 try {
-  $env = parse_ini_file(".env");
-  $host = $env["DB_HOST"];
-  $dbname = $env["DB_NAME"];
-  $username = $env["DB_USERNAME"];
-  $password = $env["DB_PASSWORD"];
+    $env = parse_ini_file("../.env");
+    $host = $env["DB_HOST"];
+    $dbname = $env["DB_NAME"];
+    $username = $env["DB_USERNAME"];
+    $password = $env["DB_PASSWORD"];
 
-  try {
-    $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
-  } catch (PDOException $e) {
-    die ("Could not connect to the database $dbname :" . $e->getMessage());
-  }
+    // Create a new PDO instance
+    $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+    // Set the PDO error mode to exception
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
-  $_SESSION["errMsg"] = "Database info is not correct";
+    error_log("Connection error: " . $e->getMessage());
 }
-
 ?>
