@@ -506,7 +506,7 @@
 
             <div class="row">
 
-              <?php @include("include/news-article.php") ?>
+              <?php @include("include/news-article.php"); ?>
 
             </div>
           </div>
