@@ -342,7 +342,7 @@
                 </div>
 
                 <div id="success-message"></div>
-                <div id="error-general" class="error-span"></div>
+                <div id="error-general" class="error-message"></div>
             </form>
           </div>
 
