@@ -360,6 +360,6 @@ include ("include/validation.php");
   <script src="js/sticky-header.js"></script>
   <script src="js/side-menu.js"></script>
   <script src="js/cookies.js"></script>
-  <script src="js/accordion.js"></script>
+  <script src="js/contact.js"></script>
 </body>
 </html>
