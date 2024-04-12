@@ -1580,6 +1580,15 @@ button {
 .office-addresses .office-list .office-container .office-card .office-content .tel:hover {
   text-decoration: underline;
 }
+.office-addresses .office-list .office-container .map {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.office-addresses .office-list .office-container .map iframe {
+  width: 100%;
+  border-radius: 0 0 20px 20px;
+}
 @media (min-width: 992px) {
   .office-addresses .office-list .office-container {
     width: 50%;
