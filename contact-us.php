@@ -1,7 +1,3 @@
-<?php
-$placeholder = "Hi, I am interested in discussing a Our Offices solution, could you please give me a call or send an email?";
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -262,7 +258,7 @@ $placeholder = "Hi, I am interested in discussing a Our Offices solution, could 
           </div>
 
           <div class="contact-container">
-            <form id="contact-form" action="insert-contact.php" method="post">
+            <form id="contact-form" action="include/insert-contact.php" method="post">
               
               <div class="sign-up-container">
                 <div class="sign-up-input">
@@ -308,8 +304,7 @@ $placeholder = "Hi, I am interested in discussing a Our Offices solution, could 
                 <label for="message">
                   Message <span class="required">*</span>
                 </label>
-                <textarea id="message" name="message" rows="5" cols="30" placeholder="<?php echo $placeholder; ?>" required>
-                </textarea>
+                <textarea id="message" name="message" rows="5" cols="30" placeholder="Hi, I am interested in discussing a Our Offices solution, could you please give me a call or send an email?" required></textarea>
               </div>
 
               <div class="form-group">
