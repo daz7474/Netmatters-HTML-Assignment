@@ -46,7 +46,7 @@ document.getElementById("contact-form").addEventListener("submit", function (e) 
           document.getElementById("contact-form").reset();
           setTimeout(() => {
             successSpan.textContent = '';
-          }, 3000);
+          }, 4000);
         }
       }
     })
