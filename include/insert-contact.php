@@ -20,41 +20,41 @@ $message = filter_input(INPUT_POST, 'message', FILTER_SANITIZE_STRING);
 // Validation
 $errors = [];
 if (empty($name)) {
-    $errors[] = 'Name is required.';
+    $errors['contact-name'] = 'Name is required.';
 }
 
 if (empty($email)) {
-    $errors[] = 'Email is required.';
+    $errors['contact-email'] = 'Email is required.';
 } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    $errors[] = 'Email is not valid.';
+    $errors['contact-email'] = 'Email is not valid.';
 }
 
 if (empty($telephone)) {
-    $errors[] = 'Telephone is required.';
+    $errors['telephone'] = 'Telephone is required.';
 }
 
 if (empty($message)) {
-    $errors[] = 'Message is required.';
+    $errors['message'] = 'Message is required.';
 }
 
 if (strlen($name) > 255) {
-    $errors[] = 'Name is too long.';
+    $errors['contact-name'] = 'Name is too long.';
 }
 
 if (strlen($email) > 255) {
-    $errors[] = 'Email is too long.';
+    $errors['contact-email'] = 'Email is too long.';
 }
 
 if (strlen($company) > 255) {
-    $errors[] = 'Company name is too long.';
+    $errors['company'] = 'Company name is too long.';
 }
 
 if (!ctype_digit($telephone) || strlen($telephone) != 11) {
-    $errors[] = 'Phone number is invalid.';
+    $errors['telephone'] = 'Phone number is invalid.';
 }
 
 if (strlen($message) > 1000) {
-    $errors[] = 'Message is too long.';
+    $errors['message'] = 'Message is too long.';
 }
 
 if (!empty($errors)) {
