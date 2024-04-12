@@ -66,7 +66,7 @@
                   EN9 1JH
                 </p>
                 <p>
-                  <a class="tel" href="#">
+                  <a class="h3 tel" href="#">
                   02045 397356
                   </a>
                 </p>
@@ -104,7 +104,7 @@
                   CB4 0WS
                 </p>
                 <p>
-                  <a class="tel" href="#">
+                  <a class="h3 tel" href="#">
                   01223 37 57 72
                   </a>
                 </p>
@@ -142,7 +142,7 @@
                   NR18 0WZ
                 </p>
                 <p>
-                  <a class="tel" href="#">
+                  <a class="h3 tel" href="#">
                   01603 70 40 20
                   </a>
                 </p>
@@ -180,7 +180,7 @@
                   NR31 7RA
                 </p>
                 <p>
-                  <a class="tel" href="#">
+                  <a class="h3 tel" href="#">
                   01493 60 32 04
                   </a>
                 </p>
