@@ -1,5 +1,5 @@
-<?php session_start();
-include ("include/validation.php");
+<?php
+$placeholder = "Hi, I am interested in discussing a Our Offices solution, could you please give me a call or send an email?";
 ?>
 
 <!DOCTYPE html>
@@ -262,7 +262,7 @@ include ("include/validation.php");
           </div>
 
           <div class="contact-container">
-            <form id="contact-form" action="contact-us.php" method="post">
+            <form id="contact-form" action="insert-contact.php" method="post">
               
               <div class="sign-up-container">
                 <div class="sign-up-input">
@@ -270,7 +270,7 @@ include ("include/validation.php");
                     <label for="contact-name">
                       Your Name <span class="required">*</span>
                     </label>
-                    <input id="contact-name" type="text" name="contact-name" value="<?php echo $_SESSION['contact-name'] ?? ''; ?>" required>
+                    <input id="contact-name" type="text" name="contact-name" required>
                   </div>
                 </div>
 
@@ -279,7 +279,7 @@ include ("include/validation.php");
                     <label for="company">
                       Company Name
                     </label>
-                    <input id="company" type="text" name="company" value="<?php echo $_SESSION['company'] ?? ''?>">
+                    <input id="company" type="text" name="company">
                   </div>
                 </div>
               </div>
@@ -290,7 +290,7 @@ include ("include/validation.php");
                     <label for="contact-email">
                       Your Email <span class="required">*</span>
                     </label>
-                    <input id="contact-email" type="email" name="contact-email" value="<?php echo $_SESSION['contact-email'] ?? ''; ?>" required>
+                    <input id="contact-email" type="email" name="contact-email" required>
                   </div>
                 </div>
 
@@ -299,7 +299,7 @@ include ("include/validation.php");
                     <label for="telephone">
                       Your Telephone Number <span class="required">*</span>
                     </label>
-                    <input id="telephone" type="tel" name="telephone" value="<?php echo $_SESSION['telephone'] ?? ''?>" required>
+                    <input id="telephone" type="tel" name="telephone" required>
                   </div>
                 </div>
               </div>
@@ -308,7 +308,7 @@ include ("include/validation.php");
                 <label for="message">
                   Message <span class="required">*</span>
                 </label>
-                <textarea id="message" name="message" rows="5" cols="30" value="<?php echo $_SESSION['message'] ?? ''?>" placeholder="<?php echo $placeholder; ?>" required>
+                <textarea id="message" name="message" rows="5" cols="30" placeholder="<?php echo $placeholder; ?>" required>
                 </textarea>
               </div>
 
@@ -333,7 +333,7 @@ include ("include/validation.php");
                 </div>
 
                 <div class="button-container">
-                  <button type="submit" class="btn btn-primary" action="#contact-form">
+                  <button id="contact-button" type="submit" class="btn btn-primary" action="#contact-form">
                     send inquiry
                   </button>
                   <span>
