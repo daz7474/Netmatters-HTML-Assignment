@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: 'icomoon';
-  src: url('../fonts/icomoon.eot?5gpnkr');
-  src: url('../fonts/icomoon.eot?5gpnkr#iefix') format('embedded-opentype'),
-    url('../fonts/icomoon.ttf?5gpnkr') format('truetype'),
-    url('../fonts/icomoon.woff?5gpnkr') format('woff'),
-    url('../fonts/icomoon.svg?5gpnkr#icomoon') format('svg');
+  src: url('../fonts/icomoon.eot?in067v');
+  src: url('../fonts/icomoon.eot?in067v#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?in067v') format('truetype'),
+    url('../fonts/icomoon.woff?in067v') format('woff'),
+    url('../fonts/icomoon.svg?in067v#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -27,6 +27,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 
 .icon-paperplane:before {
   content: "\e91b";
@@ -166,6 +167,10 @@
 
 .icon-briefcase:before {
   content: "\e906";
+}
+
+.icon-keyboard_arrow_down:before {
+  content: "\e91e";
 }
 
 .icon-double_arrow:before {
