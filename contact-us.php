@@ -329,7 +329,7 @@
                 </div>
 
                 <div class="button-container">
-                  <button id="contact-button" type="submit" class="btn btn-primary" action="#contact-form">
+                  <button id="contact-button" type="submit" class="btn btn-primary">
                     send inquiry
                   </button>
                   <span>
