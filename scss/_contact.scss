@@ -100,12 +100,17 @@
             color: $grey;
             font-size: 14px;
             line-height: 22px;
+            margin-bottom: 15px;
           }
 
           & .tel {
             color: $web-color;
             font-size: 26px;
             font-weight: 700;
+
+            &:hover {
+              text-decoration: underline;
+            }
           }
         }
       }
