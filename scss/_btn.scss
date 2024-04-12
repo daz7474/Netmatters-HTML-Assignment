@@ -2,6 +2,8 @@
 
 .btn {
   @include btnStyle($light-black);
+  @include services($service-colors);
+  @include services-hvr($service-colors-hvr);
 
   &-block {
     display: block;
@@ -70,9 +72,6 @@
       }
     }
   }
-
-  // Service button colors
-  @include services($service-colors);
 
   // Brand color
 
