@@ -42,10 +42,12 @@ document.getElementById("contact-form").addEventListener("submit", function (e) 
         let successSpan = document.getElementById('success-message');
         if (successSpan) {
           successSpan.textContent = data.success;
+          successSpan.style.padding = "10px";
           // Clear the form
           document.getElementById("contact-form").reset();
           setTimeout(() => {
             successSpan.textContent = '';
+            successSpan.style.padding = "0";
           }, 4000);
         }
       }
