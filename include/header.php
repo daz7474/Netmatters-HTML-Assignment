@@ -4,7 +4,7 @@
 
             <div class="container nav-container">
               <div class="nav-row">
-                <a class="header-logo" href="#">
+                <a class="header-logo" href="index.php">
                   <img src="img/netmatters-logo.png" alt="netmatters logo">
                 </a>
 
