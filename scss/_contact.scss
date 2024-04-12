@@ -238,6 +238,17 @@
         color: #d24d57;
         font-size: 18px
       }
+
+      & .error-message {
+        color: #d24d57;
+        margin-top: 10px;
+      }
+
+      & #success-message {
+        background-color: $digital-color;
+        color: $white;
+        padding: 10px;
+      }
     }
 
     @include mq('lg') {
