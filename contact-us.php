@@ -1,3 +1,7 @@
+<?php session_start();
+include ("include/validation.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -198,6 +202,150 @@
         </div>
       </div>
 
+      <!-- Contact Form -->
+
+      <div class="container section bottom">
+
+        <div class="contact-outer">
+          <div class="contact-info-container">
+            <div class="contact-info">
+              <p>
+                <strong>
+                  Email us on:
+                </strong>
+              </p>
+              <p>
+                <a class="h3" href="#">
+                  sales@netmatters.com
+                </a>
+              </p>
+              <p>
+                <strong>
+                  Business hours:
+                </strong>
+              </p>
+              <p>
+                <strong>
+                  Monday - Friday 07:00 - 18:00
+                </strong>
+              </p>
+            </div>
+
+            <div class="accordion">
+              <h4>
+                <a href="#">
+                  Out of Hours IT Support
+                  <span class="icon-keyboard_arrow_down"></span>
+                </a>
+              </h4>
+              <div class="accordion-info">
+                <p>
+                Netmatters IT are offering an Out of Hours service for Emergency and Critical tasks.
+                </p>
+                <p>
+                  <strong>
+                  Monday - Friday 18:00 - 22:00
+                  </strong>
+                  <strong>
+                  Saturday 08:00 - 16:00
+                  </strong>
+                  <br>
+                  <strong>
+                  Sunday 10:00 - 18:00
+                  </strong>
+                </p>
+                <p>
+                To log a critical task, you will need to call our main line number and select Option 2 to leave an Out of Hours  voicemail. A technician will contact you on the number provided within 45 minutes of your call. 
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-container">
+            <form id="contact-form" action="contact-us.php" method="post">
+              
+              <div class="sign-up-container">
+                <div class="sign-up-input">
+                  <div class="form-group">
+                    <label for="contact-name">
+                      Your Name <span class="required">*</span>
+                    </label>
+                    <input id="contact-name" type="text" name="contact-name" value="<?php echo $_SESSION['contact-name'] ?? ''; ?>" required>
+                  </div>
+                </div>
+
+                <div class="sign-up-input">
+                  <div class="form-group">
+                    <label for="company">
+                      Company Name
+                    </label>
+                    <input id="company" type="text" name="company" value="<?php echo $_SESSION['company'] ?? ''?>">
+                  </div>
+                </div>
+              </div>
+
+              <div class="sign-up-container">
+                <div class="sign-up-input">
+                  <div class="form-group">
+                    <label for="contact-email">
+                      Your Email <span class="required">*</span>
+                    </label>
+                    <input id="contact-email" type="email" name="contact-email" value="<?php echo $_SESSION['contact-email'] ?? ''; ?>" required>
+                  </div>
+                </div>
+
+                <div class="sign-up-input">
+                  <div class="form-group">
+                    <label for="telephone">
+                      Your Telephone Number <span class="required">*</span>
+                    </label>
+                    <input id="telephone" type="tel" name="telephone" value="<?php echo $_SESSION['telephone'] ?? ''?>" required>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="message">
+                  Message <span class="required">*</span>
+                </label>
+                <textarea id="message" name="message" rows="5" cols="30" value="<?php echo $_SESSION['message'] ?? ''?>" placeholder="<?php echo $placeholder; ?>" required>
+                </textarea>
+              </div>
+
+              <div class="form-group">
+                <label class="policy-container" for="checkbox-contact">
+                  <input id="checkbox-contact" type="checkbox">
+                  <span>
+                    <strong>
+                      Please tick this box if you wish to receive marketing information from us. Please see our <a
+                        href="#">Privacy Policy</a> for more information on how we keep your data safe.
+                      </strong>
+                  </span>
+                </label>
+                </div>
+
+                <div class="form-group">
+                  <div class="captcha-container">
+                    <span>
+                      This site is protected by reCAPTCHA and the Google <a href="#">Privacy Policy</a> and <a href="#">Terms of Service</a> apply.
+                    </span>
+                  </div>
+                </div>
+
+                <div class="button-container">
+                  <button type="submit" class="btn btn-primary" action="#contact-form">
+                    send inquiry
+                  </button>
+                  <span>
+                    <span class="required">*</span> Fields Required
+                  </span>
+                </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+
     <?php @include("include/newsletter.php") ?>
 
     <?php @include("include/footer.php") ?>
@@ -212,5 +360,6 @@
   <script src="js/sticky-header.js"></script>
   <script src="js/side-menu.js"></script>
   <script src="js/cookies.js"></script>
+  <script src="js/accordion.js"></script>
 </body>
 </html>
