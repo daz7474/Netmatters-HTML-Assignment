@@ -273,8 +273,8 @@
   background-color: inherit !important;
   width: 133px;
   text-align: center;
-  @include services($service-colors);
   @include services-hvr($service-colors-hvr);
+  @include services($service-colors);
 
   &:hover {
 
