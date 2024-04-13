@@ -1,4 +1,4 @@
-const consentBtn = document.getElementById("manage");
+const consentBtn = document.getElementById("manage-cookies");
 const cookiePopup = document.querySelector(".cookie-consent");
 const acceptBtn = document.getElementById("accept");
 const main = document.querySelector("body");

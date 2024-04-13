@@ -1,5 +1,5 @@
 <div>
-        <button id="manage" class="btn btn-cookie" type="button">
+        <button id="manage-cookies" class="btn btn-cookie" type="button">
           Manage Consent
         </button>
         <div class="cookie-consent">
