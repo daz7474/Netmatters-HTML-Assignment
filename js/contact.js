@@ -9,6 +9,26 @@ document.querySelector(".accordion").addEventListener("click", () => {
 // Form response
 document.getElementById("contact-form").addEventListener("submit", function (e) {
   e.preventDefault();
+
+  let isFormValid = true;
+
+  // Get all required inputs
+  const requiredInputs = this.querySelectorAll(".is-required");
+
+  // Check each required input
+  requiredInputs.forEach(input => {
+    if (!input.value.trim()) {
+      input.style.borderColor = '#d64541';
+      isFormValid = false;
+    } else {
+      input.style.borderColor = '';
+    }
+  });
+
+  if (!isFormValid) {
+    return;
+  }
+
   let formData = new FormData(this);
 
   fetch(this.action, {
