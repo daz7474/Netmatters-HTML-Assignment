@@ -262,7 +262,7 @@
                     <label for="contact-name">
                       Your Name <span class="required">*</span>
                     </label>
-                    <input id="contact-name" type="text" name="contact-name" required>
+                    <input id="contact-name" type="text" name="contact-name">
                     <span class="error-message" id="error-contact-name"></span>
                   </div>
                 </div>
@@ -284,7 +284,7 @@
                     <label for="contact-email">
                       Your Email <span class="required">*</span>
                     </label>
-                    <input id="contact-email" type="email" name="contact-email" required>
+                    <input id="contact-email" type="email" name="contact-email">
                     <span class="error-message" id="error-contact-email"></span>
                   </div>
                 </div>
@@ -294,7 +294,7 @@
                     <label for="telephone">
                       Your Telephone Number <span class="required">*</span>
                     </label>
-                    <input id="telephone" type="tel" name="telephone" required>
+                    <input id="telephone" type="tel" name="telephone">
                     <span class="error-message" id="error-telephone"></span>
                   </div>
                 </div>
@@ -304,7 +304,7 @@
                 <label for="message">
                   Message <span class="required">*</span>
                 </label>
-                <textarea id="message" name="message" rows="5" cols="30" placeholder="Hi, I am interested in discussing a Our Offices solution, could you please give me a call or send an email?" required></textarea>
+                <textarea id="message" name="message" rows="5" cols="30" placeholder="Hi, I am interested in discussing a Our Offices solution, could you please give me a call or send an email?"></textarea>
                 <span class="error-message" id="error-message"></span>
               </div>
 
