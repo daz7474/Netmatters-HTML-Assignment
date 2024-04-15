@@ -247,7 +247,7 @@
                   </strong>
                 </p>
                 <p>
-                To log a critical task, you will need to call our main line number and select Option 2 to leave an Out of Hours  voicemail. A technician will contact you on the number provided within 45 minutes of your call. 
+                To log a critical task, you will need to call our main line number and select Option 2 to leave an Out of Hours voicemail. A technician will contact you on the number provided within 45 minutes of your call.
                 </p>
               </div>
             </div>
@@ -345,9 +345,10 @@
         </div>
       </div>
 
-    <?php @include("include/newsletter.php"); ?>
-
-    <?php @include("include/footer.php"); ?>
+    <?php
+    @include("include/newsletter.php");
+    @include("include/footer.php");
+    ?>
 
     </div>
   </div>

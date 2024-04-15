@@ -760,12 +760,12 @@
       </div>
 
       <!-- Newsletter -->
-
-      <?php @include("include/newsletter.php"); ?>
-
       <!-- Footer -->
 
-      <?php @include("include/footer.php"); ?>
+      <?php
+      @include("include/newsletter.php");
+      @include("include/footer.php");
+      ?>
 
     </div>
   </div>
