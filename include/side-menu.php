@@ -3,7 +3,7 @@
     <ul class="side-mobile-menu">
       <li class="nav-box">
         <div class="item">
-          <a href="#">Contact Us</a>
+          <a href="contact-us.php">Contact Us</a>
         </div>
       </li>
 
@@ -493,7 +493,7 @@
 
       <!-- Contact Us -->
       <li class="list-item">
-        <a class="heading" href="#">Contact Us</a>
+        <a class="heading" href="contact-us.php">Contact Us</a>
         <div class="sub-menu-service">
           <ul>
             <li>
