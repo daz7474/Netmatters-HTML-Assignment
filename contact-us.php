@@ -330,7 +330,7 @@
 
                 <div class="button-container">
                   <button id="contact-button" type="submit" class="btn btn-primary">
-                    send inquiry
+                    Send Enquiry
                   </button>
                   <span>
                     <span class="required">*</span> Fields Required
