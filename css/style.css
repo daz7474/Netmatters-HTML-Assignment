@@ -1671,7 +1671,7 @@ button {
   align-items: center;
 }
 .contact-outer .contact-container #contact-form #message {
-  padding: 5px 15px;
+  padding: 10px 15px;
 }
 .contact-outer .contact-container #contact-form #message::placeholder {
   font-family: "Poppins", sans-serif;
@@ -1683,6 +1683,9 @@ button {
   font-size: 11px;
   font-weight: 600;
   margin-bottom: 30px;
+}
+.contact-outer .contact-container #contact-form .required-field {
+  font-size: 14px;
 }
 .contact-outer .contact-container #contact-form .required {
   color: #d24d57;

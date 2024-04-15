@@ -229,7 +229,7 @@
       }
 
       & #message {
-        padding: 5px 15px;
+        padding: 10px 15px;
 
         &::placeholder {
           font-family: $font-primary;
@@ -244,6 +244,10 @@
         font-size: 11px;
         font-weight: 600;
         margin-bottom: 30px;
+      }
+
+      & .required-field {
+        font-size: 14px;
       }
 
       & .required {
