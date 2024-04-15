@@ -36,7 +36,7 @@ document.getElementById("contact-form").addEventListener("submit", function (e) 
         });
       } else {
         // Clear any messages
-        document.querySelectorAll('.error-span').forEach(span => span.textContent = '');
+        document.querySelectorAll('.error-message').forEach(span => span.textContent = '');
 
         // Display success message
         let successSpan = document.getElementById('success-message');
