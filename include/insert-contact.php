@@ -87,9 +87,15 @@ $telephone = htmlspecialchars($telephone, ENT_QUOTES, 'UTF-8');
 $message = htmlspecialchars($message, ENT_QUOTES, 'UTF-8');
 
 // SQL execution
+try {
 $sql = "INSERT INTO contact_form (name, email, company_name, phone, message) VALUES (?, ?, ?, ?, ?)";
 $stmt = $pdo->prepare($sql);
 $stmt->execute([$name, $email, $company, $telephone, $message]);
 echo json_encode(['success' => 'Message sent successfully']);
+} catch (PDOException $e) {
+    error_log("SQL error: " . $e->getMessage());
+    echo json_encode(['error' => 'Failed to insert data into the database']);
+    exit();
+}
 
 ?>
