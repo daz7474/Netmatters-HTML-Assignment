@@ -332,7 +332,7 @@
                   <button id="contact-button" type="submit" class="btn btn-primary">
                     Send Enquiry
                   </button>
-                  <span>
+                  <span class="required-field">
                     <span class="required">*</span> Fields Required
                   </span>
                 </div>
