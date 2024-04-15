@@ -26,12 +26,12 @@ if ($pdo === null) {
     exit();
 }
 
-// Get form data and sanitize
-$name = filter_input(INPUT_POST, 'contact-name', FILTER_SANITIZE_STRING);
-$company = filter_input(INPUT_POST, 'company', FILTER_SANITIZE_STRING);
-$email = filter_input(INPUT_POST, 'contact-email', FILTER_SANITIZE_EMAIL);
-$telephone = filter_input(INPUT_POST, 'telephone', FILTER_SANITIZE_STRING);
-$message = filter_input(INPUT_POST, 'message', FILTER_SANITIZE_STRING);
+// Get form data
+$name = isset($_POST['contact-name']) ? $_POST['contact-name'] : '';
+$company = isset($_POST['company']) ? $_POST['company'] : '';
+$email = isset($_POST['contact-email']) ? $_POST['contact-email'] : '';
+$telephone = isset($_POST['telephone']) ? $_POST['telephone'] : '';
+$message = isset($_POST['message']) ? $_POST['message'] : '';
 
 // Validation
 $errors = [];
@@ -78,6 +78,13 @@ if (!empty($errors)) {
     echo json_encode(['errors' => $errors]);
     exit();
 }
+
+// Sanitize inputs
+$name = htmlspecialchars($name, ENT_QUOTES, 'UTF-8');
+$company = htmlspecialchars($company, ENT_QUOTES, 'UTF-8');
+$email = htmlspecialchars($email, ENT_QUOTES, 'UTF-8');
+$telephone = htmlspecialchars($telephone, ENT_QUOTES, 'UTF-8');
+$message = htmlspecialchars($message, ENT_QUOTES, 'UTF-8');
 
 // SQL execution
 $sql = "INSERT INTO contact_form (name, email, company_name, phone, message) VALUES (?, ?, ?, ?, ?)";
