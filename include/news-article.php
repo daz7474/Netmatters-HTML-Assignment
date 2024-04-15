@@ -20,6 +20,7 @@ try {
 function getNews($pdo)
 {
   try {
+    // Queries everything from news table
     $sql = $pdo->query("SELECT * FROM news");
     return $sql->fetchAll();
   } catch (PDOException $e) {
@@ -30,6 +31,7 @@ function getNews($pdo)
 
 function newsContent($image, $imageAlt, $title, $readTime, $info, $button, $type, $authorImage, $authorName, $date, $counter)
 {
+  // Set HTML structure for each news post
   return '
               <div class="col">
                 <div class="item">
@@ -65,6 +67,7 @@ function newsContent($image, $imageAlt, $title, $readTime, $info, $button, $type
   ';
 }
 
+// For each news item, call newsContent and create HTML structure for each.
 if ($pdo instanceof PDO) {
   foreach (getNews($pdo) as $news) {
       echo newsContent(

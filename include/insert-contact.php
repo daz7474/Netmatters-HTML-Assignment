@@ -26,7 +26,7 @@ if ($pdo === null) {
     exit();
 }
 
-// Get form data
+// Get form data and sanitize
 $name = filter_input(INPUT_POST, 'contact-name', FILTER_SANITIZE_STRING);
 $company = filter_input(INPUT_POST, 'company', FILTER_SANITIZE_STRING);
 $email = filter_input(INPUT_POST, 'contact-email', FILTER_SANITIZE_EMAIL);
