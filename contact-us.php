@@ -255,6 +255,14 @@
 
           <div class="contact-container">
             <form id="contact-form" action="include/insert-contact.php" method="post">
+
+              <div id="success-message"></div>
+              <div id="error-general" class="error"></div>
+              <span id="error-contact-name" class="error"></span>
+              <span id="error-company" class="error"></span>
+              <span id="error-contact-email" class="error"></span>
+              <span id="error-telephone" class="error"></span>
+              <span id="error-message" class="error"></span>
               
               <div class="sign-up-container">
                 <div class="sign-up-input">
@@ -263,7 +271,6 @@
                       Your Name <span class="required">*</span>
                     </label>
                     <input id="contact-name" class="is-required" type="text" name="contact-name">
-                    <span class="error-message" id="error-contact-name"></span>
                   </div>
                 </div>
 
@@ -273,7 +280,6 @@
                       Company Name
                     </label>
                     <input id="company" type="text" name="company">
-                    <span class="error-message" id="error-company"></span>
                   </div>
                 </div>
               </div>
@@ -285,7 +291,6 @@
                       Your Email <span class="required">*</span>
                     </label>
                     <input id="contact-email" class="is-required" type="email" name="contact-email">
-                    <span class="error-message" id="error-contact-email"></span>
                   </div>
                 </div>
 
@@ -295,7 +300,6 @@
                       Your Telephone Number <span class="required">*</span>
                     </label>
                     <input id="telephone" class="is-required" type="tel" name="telephone">
-                    <span class="error-message" id="error-telephone"></span>
                   </div>
                 </div>
               </div>
@@ -305,7 +309,6 @@
                   Message <span class="required">*</span>
                 </label>
                 <textarea id="message" class="is-required" name="message" rows="5" cols="30" placeholder="Hi, I am interested in discussing a Our Offices solution, could you please give me a call or send an email?"></textarea>
-                <span class="error-message" id="error-message"></span>
               </div>
 
               <div class="form-group">
@@ -336,9 +339,6 @@
                     <span class="required">*</span> Fields Required
                   </span>
                 </div>
-
-                <div id="success-message"></div>
-                <div id="error-general" class="error-message"></div>
             </form>
           </div>
 
