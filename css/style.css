@@ -1692,13 +1692,34 @@ button {
   font-size: 18px;
 }
 .contact-outer .contact-container #contact-form .error-message {
-  color: #d24d57;
-  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #d24d57;
+  color: #fff;
+  padding: 20px;
+  margin: 10px 0;
 }
-.contact-outer .contact-container #contact-form #success-message {
+.contact-outer .contact-container #contact-form .error-message p {
+  margin: 0;
+}
+.contact-outer .contact-container #contact-form .error-message button {
+  background: none;
+  cursor: pointer;
+}
+.contact-outer .contact-container #contact-form .success-message {
+  display: flex;
+  justify-content: space-between;
   background-color: #2ecc71;
   color: #fff;
-  margin-top: 10px;
+  padding: 20px;
+  margin: 10px 0;
+}
+.contact-outer .contact-container #contact-form .success-message p {
+  margin: 0;
+}
+.contact-outer .contact-container #contact-form .success-message button {
+  background: none;
+  cursor: pointer;
 }
 @media (min-width: 1260px) {
   .contact-outer .contact-container {
