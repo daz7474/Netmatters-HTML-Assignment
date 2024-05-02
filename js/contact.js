@@ -58,6 +58,8 @@ document.getElementById("contact-form").addEventListener("submit", function (e) 
           `;
           successSpan.classList.add('success-message');
         }
+        // Clear the form
+        this.reset();
       }
     })
     .catch(error => {
