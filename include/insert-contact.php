@@ -47,6 +47,8 @@ if (empty($email)) {
 
 if (empty($telephone)) {
     $errors['telephone'] = 'Telephone is required.';
+} elseif (!preg_match('/^(\d{11})|(\+44[\s-]?\d{10})$/', $telephone)) {
+    $errors['telephone'] = 'Phone number is invalid.';
 }
 
 if (empty($message)) {
@@ -63,10 +65,6 @@ if (strlen($email) > 255) {
 
 if (strlen($company) > 255) {
     $errors['company'] = 'Company name is too long.';
-}
-
-if (!ctype_digit($telephone) || strlen($telephone) != 11) {
-    $errors['telephone'] = 'Phone number is invalid.';
 }
 
 if (strlen($message) > 1000) {
