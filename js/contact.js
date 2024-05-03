@@ -30,49 +30,42 @@ document.getElementById("contact-form").addEventListener("submit", function (e) 
     method: "POST",
     body: formData
   })
-    .then(response => response.ok ? response.json() : Promise.reject(response))
-    .then(data => {
+    .then(response => response.json().then(data => ({
+      status: response.status, body: data
+    })))
+    .then(result => {
       // Clear all messages
       document.querySelectorAll('.error-message, .success-message').forEach(span => {
         span.innerHTML = '';
         span.classList.remove('error-message', 'success-message');
       });
 
-      if (data.errors) {
-        // Display error messages
-        Object.keys(data.errors).forEach(key => {
+      if (result.status !== 200) {
+        // Handle validation errors
+        Object.keys(result.body.errors).forEach(key => {
           let errorSpan = document.getElementById('error-' + key);
           if (errorSpan) {
-            errorSpan.innerHTML = `
-            <p>${data.errors[key]}</p><button class="closeBtn">X</button>
-            `;
+            errorSpan.innerHTML = `<p>${result.body.errors[key]}</p><button class="closeBtn">X</button>`;
             errorSpan.classList.add('error-message');
           }
         });
-      } else if (data.success) {
-        // Show success message
+      } else {
+        // Handle success
         let successSpan = document.getElementById('success-message');
         if (successSpan) {
-          successSpan.innerHTML = `
-          <p>${data.success}</p><button class="closeBtn">X</button>
-          `;
+          successSpan.innerHTML = `<p>${result.body.success}</p><button class="closeBtn">X</button>`;
           successSpan.classList.add('success-message');
         }
-        // Clear the form
-        this.reset();
+        this.reset(); // Reset form after successful submission
       }
     })
     .catch(error => {
-      error.json().then(body => {
-        // Show general error for any network error
-        let errorSpan = document.getElementById('error-general');
-        if (errorSpan) {
-          errorSpan.innerHTML = `
-          <p>Failed to process form.</p><button class="closeBtn">X</button>
-          `;
-          errorSpan.classList.add('error-message');
-        }
-      });
+      console.error('Network or JSON error:', error);
+      let errorSpan = document.getElementById('error-general');
+      if (errorSpan) {
+        errorSpan.innerHTML = `<p>Failed to process form due to a network error.</p><button class="closeBtn">X</button>`;
+        errorSpan.classList.add('error-message');
+      }
     });
 
   // Handle close button
