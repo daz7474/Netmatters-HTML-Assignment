@@ -258,11 +258,11 @@
 
               <div id="success-message"></div>
               <div id="error-general" class="error"></div>
-              <span id="error-contact-name" class="error"></span>
-              <span id="error-company" class="error"></span>
-              <span id="error-contact-email" class="error"></span>
-              <span id="error-telephone" class="error"></span>
-              <span id="error-message" class="error"></span>
+              <div id="error-contact-name" class="error"></div>
+              <div id="error-company" class="error"></div>
+              <div id="error-contact-email" class="error"></div>
+              <div id="error-telephone" class="error"></div>
+              <div id="error-message" class="error"></div>
               
               <div class="sign-up-container">
                 <div class="sign-up-input">
