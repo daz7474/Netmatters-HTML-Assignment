@@ -12,7 +12,7 @@ document.getElementById("contact-form").addEventListener("submit", function (e) 
   const requiredInputs = this.querySelectorAll(".is-required");
 
   requiredInputs.forEach(input => {
-    if (!input.value.trim()) {
+    if (!validateInput(input)) {
       input.style.borderColor = '#d64541';
       isFormValid = false;
     } else {
@@ -34,14 +34,12 @@ document.getElementById("contact-form").addEventListener("submit", function (e) 
       status: response.status, body: data
     })))
     .then(result => {
-      // Clear all messages
       document.querySelectorAll('.error-message, .success-message').forEach(span => {
         span.innerHTML = '';
         span.classList.remove('error-message', 'success-message');
       });
 
       if (result.status !== 200) {
-        // Handle validation errors
         Object.keys(result.body.errors).forEach(key => {
           let errorSpan = document.getElementById('error-' + key);
           if (errorSpan) {
@@ -50,7 +48,6 @@ document.getElementById("contact-form").addEventListener("submit", function (e) 
           }
         });
       } else {
-        // Handle success
         let successSpan = document.getElementById('success-message');
         if (successSpan) {
           successSpan.innerHTML = `<p>${result.body.success}</p><button class="closeBtn">X</button>`;
@@ -68,12 +65,35 @@ document.getElementById("contact-form").addEventListener("submit", function (e) 
       }
     });
 
-  // Handle close button
   document.addEventListener('click', function (event) {
     if (event.target.classList.contains('closeBtn')) {
       const messageContainer = event.target.parentElement;
       messageContainer.innerHTML = '';
       messageContainer.classList.remove('error-message', 'success-message');
+    }
+  });
+});
+
+function validateInput(input) {
+  const inputType = input.getAttribute('type');
+  const value = input.value.trim();
+
+  if (inputType === 'email') {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+  } else if (inputType == 'tel') {
+    return /^(\d{11})|(\+44[\s-]?\d{10})$/.test(value);
+  } else {
+    return value !== '';
+  }
+}
+
+const requiredInputs = document.querySelectorAll(".is-required");
+requiredInputs.forEach(input => {
+  input.addEventListener('blur', function () {
+    if (!validateInput(this)) {
+      this.style.borderColor = '#d64541'; // If validation fails
+    } else {
+      this.style.borderColor = ''; // If validation passes
     }
   });
 });
