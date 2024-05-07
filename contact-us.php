@@ -313,7 +313,7 @@
 
               <div class="form-group">
                 <label class="policy-container" for="checkbox-contact">
-                  <input id="checkbox-contact" type="checkbox">
+                  <input id="checkbox-contact" type="checkbox" name="marketing" value="1">
                   <span>
                     <strong>
                       Please tick this box if you wish to receive marketing information from us. Please see our <a
