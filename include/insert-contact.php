@@ -17,6 +17,7 @@ $company = isset($_POST['company']) ? $_POST['company'] : '';
 $email = isset($_POST['contact-email']) ? $_POST['contact-email'] : '';
 $telephone = isset($_POST['telephone']) ? $_POST['telephone'] : '';
 $message = isset($_POST['message']) ? $_POST['message'] : '';
+$marketing = isset($_POST['marketing']) ? 1 : 0;
 
 // Validation
 $errors = [];
@@ -71,9 +72,9 @@ $message = htmlspecialchars($message, ENT_QUOTES, 'UTF-8');
 
 // SQL execution
 try {
-$sql = "INSERT INTO contact_form (name, email, company_name, phone, message) VALUES (?, ?, ?, ?, ?)";
+$sql = "INSERT INTO contact_form (name, email, company_name, phone, message, marketing) VALUES (?, ?, ?, ?, ?, ?)";
 $stmt = $pdo->prepare($sql);
-$stmt->execute([$name, $email, $company, $telephone, $message]);
+$stmt->execute([$name, $email, $company, $telephone, $message, $marketing]);
 echo json_encode(['success' => 'Message sent successfully']);
 } catch (PDOException $e) {
     error_log("SQL error: " . $e->getMessage());
