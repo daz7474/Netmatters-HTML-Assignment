@@ -1667,8 +1667,14 @@ button {
 }
 .contact-outer .contact-container #contact-form .button-container {
   display: flex;
+  flex-direction: column-reverse;
   justify-content: space-between;
   align-items: center;
+}
+@media (min-width: 768px) {
+  .contact-outer .contact-container #contact-form .button-container {
+    flex-direction: row;
+  }
 }
 .contact-outer .contact-container #contact-form #message {
   padding: 10px 15px;
@@ -1686,6 +1692,12 @@ button {
 }
 .contact-outer .contact-container #contact-form .required-field {
   font-size: 14px;
+  margin-bottom: 10px;
+}
+@media (min-width: 768px) {
+  .contact-outer .contact-container #contact-form .required-field {
+    margin-bottom: 0;
+  }
 }
 .contact-outer .contact-container #contact-form .required {
   color: #d24d57;
