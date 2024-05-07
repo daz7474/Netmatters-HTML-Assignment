@@ -25,7 +25,7 @@ Follow these steps to set up the project locally:
 
 3. **Import the Database:**
 
-    Import the db-dump to create the required tables. 
+    Import the db-dump.sql file to create the required tables.
 
 4. **View the Project:**
 
