@@ -1,6 +1,6 @@
 # Netmatters Homepage Clone
 
-### Setup and Project Viewing
+### Setup
 
 Follow these steps to set up the project locally and view it:
 
