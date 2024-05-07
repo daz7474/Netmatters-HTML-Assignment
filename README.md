@@ -2,7 +2,7 @@
 
 ### Setup
 
-Follow these steps to set up the project locally and view it:
+Follow these steps to set up the project locally:
 
 1. **Clone the Repository:**
 
