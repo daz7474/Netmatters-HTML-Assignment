@@ -2733,7 +2733,6 @@ button {
 
 .clients-container {
   display: flex;
-  overflow-x: clip;
   z-index: 5;
 }
 .clients-container .item-container {
