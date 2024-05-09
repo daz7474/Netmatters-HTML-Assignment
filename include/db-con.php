@@ -3,7 +3,7 @@
 $pdo = null;
 
 try {
-    $env = parse_ini_file(".env");
+    $env = parse_ini_file("../.env");
     $host = $env["DB_HOST"];
     $dbname = $env["DB_NAME"];
     $username = $env["DB_USERNAME"];
@@ -16,4 +16,3 @@ try {
 } catch (PDOException $e) {
     error_log("Connection error: " . $e->getMessage());
 }
-?>
